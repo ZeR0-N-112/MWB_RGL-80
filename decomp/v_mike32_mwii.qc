@@ -147,8 +147,8 @@ $bbox -12.607 -28.384 -65.939 28.774 19.342 64.32
       $definebone "j_b_015" "j_mag1" 0.000000 0.000000 0.000000 -0.000002 0.000004 -0.000001 0.000000 0.000000 0.000000 -0.000002 0.000004 -0.000001
       $definebone "j_b_014" "j_mag1" 0.000000 0.000000 0.000000 -0.000002 0.000004 -0.000001 0.000000 0.000000 0.000000 -0.000002 0.000004 -0.000001
       $definebone "ValveBiped.Anim_Attachment_RH" "" 0.000000 0.000000 0.000000 0.000000 -89.999985 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "tag_sling" "ValveBiped.Anim_Attachment_RH" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "tag_mag_attach" "tag_sling" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+      $definebone "tag_launcher_offset" "ValveBiped.Anim_Attachment_RH" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+      $definebone "tag_mag_attach" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "j_mag2" "tag_mag_attach" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "j_metaindex_ri_1" "j_wrist_ri" 0.610338 -0.939522 -0.070255 8.026912 -10.059256 94.836388 -0.000000 0.000000 0.000000 -0.000009 -0.000003 -0.000002
       $definebone "j_index_ri_1" "j_metaindex_ri_1" 2.619617 0.000225 -0.000401 1.152324 20.059134 -11.546709 0.000001 0.000000 0.000000 -0.000005 -0.000005 -0.000000
@@ -246,21 +246,21 @@ $bbox -12.607 -28.384 -65.939 28.774 19.342 64.32
       $definebone "valvebiped.bip01_r_hand" "j_wrist_ri" -0.380543 -0.161674 -0.314842 4.533306 -6.729732 -92.423866 0 0 0 0 0 0
 	  $definebone "valvebiped.bip01_r_forearm" "j_elbow_ri" -0.742136 0.982276 0.740597 5.279474 -5.403964 12.526018 0 0 0 0 0 0
 	  $definebone "valvebiped.bip01_r_upperarm" "j_shoulder_ri" -0.983025 0.142274 1.280083 2.759046 3.723145 12.87759 0 0 0 0 0 0
-      $definebone "j_ejectioncover" "tag_sling" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "tag_barrel_attach" "tag_sling" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "tag_brass" "tag_sling" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+      $definebone "j_ejectioncover" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+      $definebone "tag_barrel_attach" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+      $definebone "tag_brass" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "tag_holo" "tag_scope" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
 	  $definebone "tag_acog_ads" "tag_scope" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "tag_hybrid" "tag_scope" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "tag_mag_show2" "tag_sling" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+      $definebone "tag_mag_show2" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "tag_reflex" "tag_scope" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "tag_scope" "j_forend" 0.021992 0.903030 -0.006039 -0.000282 0.000453 -89.997803 0.000000 0.000000 0.000000 0.000005 0.000004 -0.000001
-      $definebone "tag_sight_off" "tag_sling" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "tag_sight_on" "tag_sling" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "tag_stock_attach" "tag_sling" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "tag_stock_hide" "tag_sling" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "tag_thermal" "tag_sling" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "j_magrel" "tag_sling" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+      $definebone "tag_sight_off" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+      $definebone "tag_sight_on" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+      $definebone "tag_stock_attach" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+      $definebone "tag_stock_hide" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+      $definebone "tag_thermal" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+      $definebone "j_magrel" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "tag_mag_hide" "j_ejectioncover" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "tag_mag_show" "j_ejectioncover" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "tag_grip_hide" "tag_barrel_attach" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
@@ -2004,7 +2004,7 @@ $sequence "jump_land" {
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 1.363
-	ikrule "rhand" touch "tag_sling" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0  
+	ikrule "rhand" touch "tag_launcher_offset" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0  
 	ikrule "lhand" touch "tag_ik_loc_le" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1  
 }
 
@@ -2044,7 +2044,7 @@ $sequence "jump" {
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 2.727
-	ikrule "rhand" touch "tag_sling" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0  
+	ikrule "rhand" touch "tag_launcher_offset" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0  
 	ikrule "lhand" touch "tag_ik_loc_le" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1  
 }
 
@@ -2204,7 +2204,7 @@ $sequence "jog_out" {
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 1.304
-	ikrule "rhand" touch "tag_sling" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0  
+	ikrule "rhand" touch "tag_launcher_offset" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0  
 	ikrule "lhand" touch "tag_ik_loc_le" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1  
 }
 
