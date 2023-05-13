@@ -38,9 +38,9 @@ SWEP.Primary.RPM = 125
 SWEP.CanChamberRound = false
 SWEP.CanDisableAimReload = true
 SWEP.Projectile = {
-    Class = "mg_custom40mm", --bullet entity class
-    Speed = 2800, 
-    Gravity = 1.05,
+    Class = "sdrk_rgl80_grenade", --bullet entity class
+    Speed = 2800, --2800
+    Gravity = 1.05, --1.05
     Penetrate = true
 }
 
