@@ -540,7 +540,7 @@ $ikchain "lhand" "j_wrist_le" knee 0.707 0.707 0
 $animation "a_aim_idle_to_sub_corrective_animation" "v_mike4_anims\a_aim_idle_to_sub_corrective_animation.smd" {
 }
 
-$animation "a_delta_ads_additive_for_offset_corrective_animation" "v_mike4_anims\a_delta_ads_additive_for_offset_corrective_animation.smd" {
+$animation "a_delta_ads_additive_for_offset_corrective_animation" "anims\vm_p32_la_mike32_jog_offset_additive_cor.smd" {
 }
 
 $animation "a_jog_offset_idle_corrective_animation" "v_mike4_anims\a_jog_offset_idle_corrective_animation.smd" {
@@ -690,7 +690,7 @@ $animation "a_aim_idle_to_sub" "v_mike4_anims\a_aim_idle_to_sub.smd" {
 	subtract "a_aim_idle_to_sub_corrective_animation" 0
 }
 
-$animation "a_delta_ads_additive_for_offset" "v_mike4_anims\a_delta_ads_additive_for_offset.smd" {
+$animation "a_delta_ads_additive_for_offset" "anims\vm_p32_la_mike32_ads_additive.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "a_delta_ads_additive_for_offset_corrective_animation" 0
@@ -811,7 +811,7 @@ $animation "a_sprint_idle" "v_mike4_anims\a_sprint_idle.smd" {
 }
 
 $animation "a_sprint" "anims\vm_p32_la_mike32_sprint_loop.smd" {
-	fps 30
+	fps 22
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "a_sprint_corrective_animation" 0
 }
