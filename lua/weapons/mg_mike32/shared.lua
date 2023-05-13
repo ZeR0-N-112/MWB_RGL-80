@@ -56,13 +56,13 @@ SWEP.Reverb = {
  
     Sounds = {
         Outside = {
-            Layer = Sound("Atmo_RPG.Outside"),
-            Reflection = Sound("Reflection_Pistol.Outside")
+            Layer = Sound("Atmo_M203.Outside"),
+            Reflection = Sound("")
         }, 
 
         Inside = { 
             Layer = Sound("Atmo_Launcher.Inside"),
-            Reflection = Sound("Reflection_Shotgun.Inside")
+            Reflection = Sound("")
         }
     }
 }
