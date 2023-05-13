@@ -9,6 +9,13 @@ $bodygroup "receiver"
 	blank
 	blank
 }
+$bodygroup "ammotype"
+
+	studio "mw2mgl40mm.smd"
+	studio "mw2mgl40mmbuck.smd"
+	blank
+	blank
+}
 
 $surfaceprop "weapon"
 
