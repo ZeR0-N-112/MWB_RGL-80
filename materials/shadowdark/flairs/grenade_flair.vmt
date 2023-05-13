@@ -1,0 +1,8 @@
+"UnlitGeneric"
+
+{
+	"$basetexture"	"shadowdark\flairs\grenade_flair"
+	"$translucent" 	"1"
+	"$additive"	"1"
+	"$ignorez" "1"
+}
