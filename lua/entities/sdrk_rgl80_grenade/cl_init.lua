@@ -12,7 +12,7 @@ ENT.InnerFlairScale = 0.3
 local flair = Material("shadowdark/flairs/grenade_flair.vmt")
 
 game.AddParticles( "particles/rgl80.pcf" )
-PrecacheParticleSystem("rgl80_smoketrail")
+PrecacheParticleSystem("rgl80_smoke_trail")
 
 function ENT:DrawTranslucent(flags)
 	if (self:GetVelocity():LengthSqr() > 0 || self:GetNailed()) then
@@ -42,7 +42,6 @@ function ENT:DrawTranslucent(flags)
         cam.End3D2D()
 
 		if (!self.bTracerOn) then
-			ParticleEffectAttach("rgl80_smoke_trail", PATTACH_ABSORIGIN_FOLLOW, self, 0)
 			self.bTracerOn = true
 		end
 	end
@@ -51,4 +50,5 @@ end
 function ENT:OnRemove() 
 	ParticleEffect("Generic_explo_high", self:GetPos(), self:GetAngles())
 	self:EmitSound("^viper/shared/frag_expl.ogg", 0, 100, 1, CHAN_BODY)
+	util.Decal("Scorch", self:GetPos(), self:GetPos() + self:GetUp() * -100, {self})
 end

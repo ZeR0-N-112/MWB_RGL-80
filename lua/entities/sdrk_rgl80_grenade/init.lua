@@ -14,6 +14,7 @@ ENT.Model = Model("models/items/ar2_grenade.mdl")
 ENT.AoeEntity = nil
 
 function ENT:Initialize()
+	ParticleEffectAttach("rgl80_smoke_trail", PATTACH_ABSORIGIN_FOLLOW, self, 0)
 	self:SetModel(self.Model)
 	self:PhysicsInitBox(Vector(-10, -1, -1), Vector(10, 1, 1))
 	self:GetPhysicsObject():Wake()
@@ -216,6 +217,7 @@ function ENT:Impact(tr1, phys, bHull)
 	})
 
 	util.BlastDamage(self, self:GetOwner(), self:GetPos(), 128, self.Weapon.Bullet.Damage[1] * 4)
+	util.ScreenShake(self:GetPos(), 3500, 1111, 1, 124 * 4)
 	self:Remove()
 end
 
