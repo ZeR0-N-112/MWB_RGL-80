@@ -33,10 +33,11 @@ $attachment "camera" "tag_playerhelmet" 0 0 0 rotate 0 0 0
 $attachment "reflex" "tag_reflex" 0 0 0 rotate 0 0 0
 $attachment "holo" "tag_holo" 0 0 0 rotate 0 0 0
 $attachment "scope" "tag_scope" 0 0 0 rotate 0 0 0
-$attachment "acog" "tag_acog_ads" 0 0 0 rotate 0 0 0
+$attachment "acog" "tag_acog_2" 0 0 0 rotate 0 0 0
 $attachment "hybrid" "tag_hybrid" 0 0 0 rotate 0 0 0
 $attachment "thermal" "tag_thermal" 0 0 0 rotate 0 0 0
 $attachment "align" "tag_align_gun" 0 0 0 rotate 0 0 0
+$attachment "laser" "tag_laser_attach" 0 0 0 rotate 0 0 0
 
 $cbox 0 0 0 0 0 0
 
@@ -249,17 +250,18 @@ $bbox -12.607 -28.384 -65.939 28.774 19.342 64.32
       $definebone "j_ejectioncover" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "tag_barrel_attach" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "tag_brass" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "tag_holo" "tag_scope" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-	  $definebone "tag_acog_ads" "tag_scope" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "tag_hybrid" "tag_scope" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+      $definebone "tag_holo" "j_forend" 0.421992 0.803030 -0.06039 -0.000282 0.000453 -89.997803 0.0 0.00 -0.0 0.000005 0.000004 -0.000001
+	  $definebone "tag_laser_attach" "j_forend" 7.121992 -0.6369 -0.06039 -0.000282 0.000453 -89.997803 8.00 0.00 -1.44 0.000005 0.000004 -0.000001
+	  $definebone "tag_acog_2" "j_forend" 0.421992 0.803030 -0.06039 -0.000282 0.000453 -89.997803 0.0 0.00 -0.0 0.000005 0.000004 -0.000001
+      $definebone "tag_hybrid" "j_forend" 0.421992 0.803030 -0.06039 -0.000282 0.000453 -89.997803 0.0 0.00 -0.0 0.000005 0.000004 -0.000001
       $definebone "tag_mag_show2" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "tag_reflex" "tag_scope" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "tag_scope" "j_forend" 0.021992 0.903030 -0.006039 -0.000282 0.000453 -89.997803 0.000000 0.000000 0.000000 0.000005 0.000004 -0.000001
+      $definebone "tag_reflex" "j_forend" 0.421992 0.803030 -0.06039 -0.000282 0.000453 -89.997803 0.0 0.00 -0.0 0.000005 0.000004 -0.000001
+      $definebone "tag_scope" "j_forend" 0.421992 0.803030 -0.06039 -0.000282 0.000453 -89.997803 0.0 0.00 -0.0 0.000005 0.000004 -0.000001
       $definebone "tag_sight_off" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "tag_sight_on" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "tag_stock_attach" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "tag_stock_hide" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-      $definebone "tag_thermal" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+      $definebone "tag_thermal" "j_forend" 0.421992 0.803030 -0.06039 -0.000282 0.000453 -89.997803 0.0 0.00 -0.0 0.000005 0.000004 -0.000001
       $definebone "j_magrel" "tag_launcher_offset" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "tag_mag_hide" "j_ejectioncover" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
       $definebone "tag_mag_show" "j_ejectioncover" 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
@@ -398,10 +400,11 @@ $bonemerge "ValveBiped.Bip01_R_Finger42"
 $bonemerge "ValveBiped.Bip01_R_Finger32"
 $bonemerge "ValveBiped.Anim_Attachment_RH"
 $bonemerge "tag_launcher_offset"
+$bonemerge "tag_scope"
 $bonemerge "j_forend"
 $bonemerge "j_ejectioncover"
 $bonemerge "j_trigger"
-$bonemerge "tag_acog_ads"
+$bonemerge "tag_acog_2"
 $bonemerge "tag_barrel_attach"
 $bonemerge "tag_holo"
 $bonemerge "tag_hybrid"
@@ -409,7 +412,6 @@ $bonemerge "tag_ik_loc_ri"
 $bonemerge "tag_mag_attach"
 $bonemerge "tag_mag_show2"
 $bonemerge "tag_reflex"
-$bonemerge "tag_scope"
 $bonemerge "tag_sight_off"
 $bonemerge "tag_sight_on"
 $bonemerge "tag_stock_attach"
