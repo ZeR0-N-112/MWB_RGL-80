@@ -28,7 +28,7 @@ SWEP.Trigger = {
 SWEP.Slot = 1
 SWEP.HoldType = "Pistol"
 
-SWEP.Primary.Sound = Sound("Atmo_Pistol_Mag_Sup.Outside")
+SWEP.Primary.Sound = Sound("mw22/rgl80_fire.ogg")
 SWEP.Primary.Ammo = "357"
 SWEP.Primary.ClipSize = 6 
 SWEP.Primary.Automatic = false
@@ -56,12 +56,12 @@ SWEP.Reverb = {
  
     Sounds = {
         Outside = {
-            Layer = Sound("Atmo_Pistol_Mag.Outside"),
+            Layer = Sound("Atmo_RPG.Outside"),
             Reflection = Sound("Reflection_Pistol.Outside")
         }, 
 
         Inside = { 
-            Layer = Sound("Atmo_Shotgun.Inside"),
+            Layer = Sound("Atmo_Launcher.Inside"),
             Reflection = Sound("Reflection_Shotgun.Inside")
         }
     }
