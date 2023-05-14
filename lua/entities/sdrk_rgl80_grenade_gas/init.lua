@@ -77,7 +77,6 @@ function ENT:PhysicsUpdate(phys)
 	local tr = util.TraceHull(trData)
 
 	if (tr.Hit && (tr.Entity:IsPlayer() || tr.Entity:IsNPC())) then
-		self:SetPos(tr.HitPos)
 		self:Impact(tr, phys, true)
 		return
 	end
@@ -217,8 +216,9 @@ function ENT:Impact(tr1, phys, bHull)
 		end
 	})
 
-	util.BlastDamage(self, self:GetOwner(), self:GetPos(), 128, self.Weapon.Bullet.Damage[1] * 4)
-	util.ScreenShake(self:GetPos(), 3500, 1111, 1, 124 * 4)
+	local gas = ents.Create("mg_aoe_arrow_gas")
+	gas:SetPos(self:GetPos())
+	gas:Spawn()
 	self:Remove()
 end
 

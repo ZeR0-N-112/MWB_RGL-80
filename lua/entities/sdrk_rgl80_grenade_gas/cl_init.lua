@@ -3,7 +3,7 @@ include("shared.lua")
 ENT.RenderGroup = RENDERGROUP_TRANSLUCENT
 ENT.bTracerOn = false
 
-ENT.OuterFlairColor = Color(236,153,17,255)
+ENT.OuterFlairColor = Color(39,204,31,255)
 ENT.InnerFlairColor = Color(255,255,255,255)
 
 ENT.OuterFlairScale = 1
@@ -45,10 +45,4 @@ function ENT:DrawTranslucent(flags)
 			self.bTracerOn = true
 		end
 	end
-end
-
-function ENT:OnRemove() 
-	ParticleEffect("Generic_explo_high", self:GetPos(), self:GetAngles())
-	self:EmitSound("^viper/shared/frag_expl.ogg", 0, 100, 1, CHAN_BODY)
-	util.Decal("Scorch", self:GetPos(), self:GetPos() + self:GetUp() * -100, {self})
 end

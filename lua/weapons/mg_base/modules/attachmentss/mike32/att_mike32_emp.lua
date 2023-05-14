@@ -12,5 +12,5 @@ function ATTACHMENT:Stats(weapon)
 end
 function ATTACHMENT:PostProcess(weapon)
     BaseClass.PostProcess(self, weapon)
-    weapon.Projectile.Class = "mg_pepsican"
+    weapon.Projectile.Class = "sdrk_rgl80_grenade_emp"
 end
