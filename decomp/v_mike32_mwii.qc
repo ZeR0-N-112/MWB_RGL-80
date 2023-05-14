@@ -1733,7 +1733,7 @@ $sequence "melee_hit_03" {
 }
 
 $sequence "ads_in" {
-	"anims\vm_p32_la_mike32_ads_up.smd"
+	"mw2mglanims\vm_p32_la_mike32_idle.smd"
 	{ event 5004 1 "weap_ar_mike4_ads_up" }
 	{ event 9011 0 "1" }
 	{ event 9011 0 "1" }
@@ -1746,7 +1746,6 @@ $sequence "ads_in" {
 	addlayer "sprint_offset"
 	addlayer "freefall_loop"
 	addlayer "firemode_offset"
-	
 	addlayer "grip_barshort_gripang_offset"
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
@@ -1759,8 +1758,8 @@ $sequence "ads_in" {
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
-	ikrule "rhand" touch "tag_ik_loc_ri" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 10 10 target 0  
-	ikrule "lhand" touch "tag_ik_loc_le" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 10 10 target 1  
+	ikrule "rhand" touch "tag_ik_loc_ri" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0  
+	ikrule "lhand" touch "tag_ik_loc_le" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1  
 }
 
 $sequence "ads_out" {
@@ -1888,9 +1887,9 @@ $sequence "sprint_in" {
 }
 
 $sequence "sprint_loop" {
-	"a_sprint_idle"
+	"a_jog_idle"
 	"a_sprint"
-	blend "sprint_loop" 0 0.1
+	blend "sprint_loop" 0 0.01
 	blendwidth 2
 	delta
 	fadein 0.2
