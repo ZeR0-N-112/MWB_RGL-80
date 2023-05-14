@@ -218,6 +218,7 @@ function ENT:Impact(tr1, phys, bHull)
 
 	local gas = ents.Create("mg_aoe_arrow_gas")
 	gas:SetPos(self:GetPos())
+	gas:SetOwner(self:GetOwner())
 	gas:Spawn()
 	self:Remove()
 end

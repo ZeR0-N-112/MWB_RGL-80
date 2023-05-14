@@ -9,7 +9,7 @@ function ENT:Draw()
 		dlight.b = 21
 		dlight.brightness = 2
 		dlight.Decay = 1000
-		dlight.Size = 528
+		dlight.Size = 128
 		dlight.DieTime = CurTime() + 1
 	end
 end
