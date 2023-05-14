@@ -572,7 +572,7 @@ $animation "a_walk_corrective_animation" "anims\vm_p32_la_mike32_jog_loop_cor.sm
 $animation "@a_walk_to_sprint_corrective_animation" "anims\vm_p32_la_mike32_jog_to_sprint_cor.smd" {
 }
 
-$animation "a_sprint_idle_corrective_animation" "anims\vm_p32_la_mike32_sprint_loop_cor.smd" {
+$animation "a_sprint_idle_corrective_animation" "anims\vm_p32_la_mike32_sprint_idle_cor.smd" {
 }
 
 $animation "a_sprint_corrective_animation" "anims\vm_p32_la_mike32_sprint_loop_cor.smd" {
