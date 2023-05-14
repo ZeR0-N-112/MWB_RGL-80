@@ -1,17 +1,18 @@
 include("shared.lua")
 
-killicon.Add("mg_arrow", "VGUI/entities/mg_crossbow", Color(255, 0, 0, 255))
-
 ENT.RenderGroup = RENDERGROUP_TRANSLUCENT
 ENT.bTracerOn = false
 
-ENT.OuterFlairColor = Color(255,100,100,255)
+ENT.OuterFlairColor = Color(236,153,17,255)
 ENT.InnerFlairColor = Color(255,255,255,255)
 
 ENT.OuterFlairScale = 1.5
 ENT.InnerFlairScale = 0.3
 
 local flair = Material("shadowdark/flairs/grenade_flair.vmt")
+
+game.AddParticles( "particles/rgl80.pcf" )
+PrecacheParticleSystem("rgl80_smoke_trail")
 
 function ENT:DrawTranslucent(flags)
 	if (self:GetVelocity():LengthSqr() > 0 || self:GetNailed()) then
@@ -41,7 +42,6 @@ function ENT:DrawTranslucent(flags)
         cam.End3D2D()
 
 		if (!self.bTracerOn) then
-			ParticleEffectAttach("arrow_trail", PATTACH_ABSORIGIN_FOLLOW, self, 0)
 			self.bTracerOn = true
 		end
 	end
@@ -50,4 +50,5 @@ end
 function ENT:OnRemove() 
 	ParticleEffect("Generic_explo_high", self:GetPos(), self:GetAngles())
 	self:EmitSound("^viper/shared/frag_expl.ogg", 0, 100, 1, CHAN_BODY)
+	util.Decal("Scorch", self:GetPos(), self:GetPos() + self:GetUp() * -100, {self})
 end
