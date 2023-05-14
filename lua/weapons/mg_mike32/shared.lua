@@ -1,5 +1,12 @@
 AddCSLuaFile()
 
+game.AddParticles( "particles/rgl80.pcf" )
+PrecacheParticleSystem("rgl80_smoke_trail")
+
+game.AddParticles("particles/rgl80napalm.pcf")
+PrecacheParticleSystem("napalm_firepool")
+PrecacheParticleSystem("napalm_bomb_trail")
+
 PrecacheParticleSystem("AC_muzzle_desert")
 PrecacheParticleSystem("AC_muzzle_pistol_suppressed")
 PrecacheParticleSystem("AC_muzzle_pistol_ejection")

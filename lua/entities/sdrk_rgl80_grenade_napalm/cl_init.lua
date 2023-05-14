@@ -3,13 +3,16 @@ include("shared.lua")
 ENT.RenderGroup = RENDERGROUP_TRANSLUCENT
 ENT.bTracerOn = false
 
-ENT.OuterFlairColor = Color(236,153,17,255)
+ENT.OuterFlairColor = Color(235,21,68,255)
 ENT.InnerFlairColor = Color(255,255,255,255)
 
 ENT.OuterFlairScale = 1
 ENT.InnerFlairScale = 0.3
 
 local flair = Material("shadowdark/flairs/grenade_flair.vmt")
+
+game.AddParticles( "particles/rgl80.pcf" )
+PrecacheParticleSystem("rgl80_smoke_trail")
 
 function ENT:DrawTranslucent(flags)
 	if (self:GetVelocity():LengthSqr() > 0 || self:GetNailed()) then
@@ -45,7 +48,7 @@ function ENT:DrawTranslucent(flags)
 end
 
 function ENT:OnRemove() 
-	ParticleEffect("Generic_explo_high", self:GetPos(), self:GetAngles())
-	self:EmitSound("^viper/shared/frag_expl.ogg", 0, 100, 1, CHAN_BODY)
+	ParticleEffect("Generic_explo_tiny", self:GetPos(), self:GetAngles())
+	self:EmitSound("cs/napalm_detonate"..math.random(1,3)..".wav", 75, 100, 1, CHAN_WEAPON)
 	util.Decal("Scorch", self:GetPos(), self:GetPos() + self:GetUp() * -100, {self})
 end

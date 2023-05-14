@@ -1,5 +1,5 @@
 ATTACHMENT.Base = "att_ammo"
-ATTACHMENT.Name = "40mm Incendiary"
+ATTACHMENT.Name = "40mm Napalm"
 ATTACHMENT.Icon = Material("viper/mw/attachments/icons/grips/icon_attachment_bipod_grip.vmt")
 ATTACHMENT.WeaponBodygroups = {
     ["ammotype"] = 1
@@ -12,5 +12,5 @@ function ATTACHMENT:Stats(weapon)
 end
 function ATTACHMENT:PostProcess(weapon)
     BaseClass.PostProcess(self, weapon)
-    weapon.Projectile.Class = "mg_drpeppercan"
+    weapon.Projectile.Class = "sdrk_rgl80_grenade_napalm"
 end
