@@ -1889,12 +1889,12 @@ $sequence "sprint_in" {
 $sequence "sprint_loop" {
 	"a_jog_idle"
 	"a_sprint"
-	blend "sprint_loop" 0 0.01
+	blend "sprint_loop" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
 	fadeout 0.2
-	realtime
+    realtime
 }
 
 $sequence "a_sprint_to_walk" {
