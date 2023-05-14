@@ -13,7 +13,7 @@ end
 function ENT:Think() 
 
     for k, v in pairs(ents.FindInSphere(self:GetPos(), 50)) do 
-        if v.ClassName != self.ClassName then
+        if v.ClassName != self.ClassName && !v:IsWorld() then
             v:Ignite(10, 10) 
             v:TakeDamage(10, self.Owner, self)
         end
