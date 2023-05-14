@@ -575,7 +575,7 @@ $animation "@a_walk_to_sprint_corrective_animation" "anims\vm_p32_la_mike32_jog_
 $animation "a_sprint_idle_corrective_animation" "v_mike4_anims\a_sprint_idle_corrective_animation.smd" {
 }
 
-$animation "a_sprint_corrective_animation" "anims\vm_p32_la_mike32_jog_to_sprint_cor.smd" {
+$animation "a_sprint_corrective_animation" "anims\vm_p32_la_mike32_jog_loop_cor.smd" {
 }
 
 $animation "@a_sprint_to_walk_corrective_animation" "anims\vm_p32_la_mike32_jog_to_sprint_cor.smd" {
@@ -1890,7 +1890,7 @@ $sequence "sprint_in" {
 $sequence "sprint_loop" {
 	"a_sprint_idle"
 	"a_sprint"
-	blend "sprint_loop" 0 1
+	blend "sprint_loop" 0 0.1
 	blendwidth 2
 	delta
 	fadein 0.2
