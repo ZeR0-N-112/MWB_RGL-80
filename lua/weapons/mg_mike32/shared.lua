@@ -23,7 +23,7 @@ SWEP.Base = "mg_base"
 
 SWEP.PrintName = "RGL-80"
 SWEP.Category = "Modern Warfare"
-SWEP.SubCategory = "Specials"
+SWEP.SubCategory = "Launchers"
 SWEP.Spawnable = true
 SWEP.VModel = Model("models/zeron/mgl/vm_la_mike32.mdl")
 SWEP.WorldModel = Model("models/viper/mw/weapons/w_deagle.mdl")
@@ -141,16 +141,16 @@ SWEP.WorldModelOffsets = {
 
 SWEP.ViewModelOffsets = {
     Sprint = {
-        Angles = Angle(0, 5, 5), 
-        Pos = Vector(-0, -0, -1)
+        Angles = Angle(-5, 5, 10), 
+        Pos = Vector(-0, -0, -3)
     }, 
     Aim = {
         Angles = Angle(0, 0, 0), 
-        Pos = Vector(-0.026, -8.4, -0.589)
+        Pos = Vector(-1.585, -8.4, -1.0715)
     }, 
     Idle = {  
         Angles = Angle(0, 0, 0), 
-        Pos = Vector(0, 0, 0) 
+        Pos = Vector(-1, 0, -0.5) 
     },   
     Inspection = {
         Bone = "tag_pistol_offset",
@@ -221,7 +221,7 @@ if CLIENT then
 			
             draw.RoundedBox( 20, x + cone, y + 40, 11, 2,Color(255,255,255,crosshairAlpha))
 
-            draw.RoundedBox(20, x-1.5, y-1.5, 3, 3, Color(255,255,255,crosshairAlpha))
+     
         end
     
         surface.SetAlphaMultiplier(1)

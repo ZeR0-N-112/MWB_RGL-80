@@ -17,7 +17,7 @@ ATTACHMENT.Reticle = {
     Size = 900,
     Color = Color(255, 255, 255, 255),
     Attachment = "reticle",
-	Offset = Vector(0, 0, 0.3)
+	Offset = Vector(-0.18, 0, 0)
 }
 local BaseClass = GetAttachmentBaseClass(ATTACHMENT.Base)
 function ATTACHMENT:Stats(weapon)

@@ -40,9 +40,9 @@ SWEP.Animations = {
 
     ["Reload"] = {
         Sequences = {"reload"},
-        Length = 1.8,
+        Length = 5.74,
         Fps = 30,
-        MagLength = 1.2,
+        MagLength = 3.54,
         NextSequence = "Idle",
         Events = {
             {Time = 0.033, Callback = function(self) self:DoSound(Sound("MW19_DEAGLE.Reload_Start")) end},
@@ -55,9 +55,9 @@ SWEP.Animations = {
 
     ["Reload_Fast"] = {
         Sequences = {"reload_fast"},
-        Length = 1,
+        Length = 4.05,
         Fps = 30,
-        MagLength = 0.6,
+        MagLength = 2.7,
         NextSequence = "Idle",
         Events = {
             {Time = 0.033, Callback = function(self) self:DoSound(Sound("MW19_DEAGLE.Reload_Start_Fast")) end},
@@ -133,9 +133,9 @@ SWEP.Animations = {
 
     ["Reload_Empty"] = {
         Sequences = {"reload"},
-        Length = 1.8,
+        Length = 5.74,
         Fps = 30,
-        MagLength = 1,
+        MagLength = 3.54,
         NextSequence = "Idle",
         Events = {
             {Time = 0, Callback = function(self) self:DoSound(Sound("MW19_DEAGLE.Reload_Start_Empty")) end},
@@ -150,9 +150,9 @@ SWEP.Animations = {
 
     ["Reload_Empty_Fast"] = {
         Sequences = {"reload_fast"},
-        Length = 1.25,
+        Length = 4.05,
         Fps = 30,
-        MagLength = 0.6,
+        MagLength = 2.7,
         NextSequence = "Idle",
         Events = {
             {Time = 0, Callback = function(self) self:DoSound(Sound("MW19_DEAGLE.Reload_Start_Empty_Fast")) end},
@@ -308,7 +308,7 @@ SWEP.Animations = {
 
     ["Inspect"] = {
         Sequences = {"inspect"},
-        Length = 5,
+        Length = 6.13,
         Fps = 30,
         NextSequence = "Idle",
         Events = {
