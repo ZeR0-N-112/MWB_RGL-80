@@ -2,7 +2,7 @@ ATTACHMENT.Base = "att_ammo"
 ATTACHMENT.Name = "40mm M576 Buckshot"
 ATTACHMENT.Icon = Material("viper/mw/attachments/icons/grips/icon_attachment_bipod_grip.vmt")
 ATTACHMENT.Bodygroups = {
-    ["ammotype"] = 0
+    ["ammotype"] = 1
 }
 local BaseClass = GetAttachmentBaseClass(ATTACHMENT.Base)
 function ATTACHMENT:Stats(weapon)
@@ -11,6 +11,8 @@ function ATTACHMENT:Stats(weapon)
     weapon.Bullet.Damage[2] = 30
 	weapon.Bullet.NumBullets = 20
 	weapon.Firemodes[1].Name = "BUCKSHOT"
+	weapon.Primary.Sound = Sound("mw19.scharlie.Fire")
+	weapon.ParticleEffects.MuzzleFlash = "AC_muzzle_Shotgun"
 end
 function ATTACHMENT:PostProcess(weapon)
     BaseClass.PostProcess(self, weapon)

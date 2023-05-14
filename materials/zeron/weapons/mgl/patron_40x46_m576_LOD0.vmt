@@ -10,7 +10,8 @@
     "$blendtintbybasealpha" "1"
 
     "$phong" "1"
-    "$phongboost" "8"
+    "$phongboost" "120"
+    "$phongexponent" "0"
     "$phongfresnelranges" "[1 0.5 0]"
     "$phongalbedotint" "1"
 

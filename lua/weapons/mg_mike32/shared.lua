@@ -25,7 +25,7 @@ SWEP.Trigger = {
     ReleasedSound = Sound("weap_mike1911_fire_disconnector"),
     Time = 0.05
 }
-SWEP.Slot = 1
+SWEP.Slot = 4
 SWEP.HoldType = "Pistol"
 
 SWEP.Primary.Sound = Sound("mw22/rgl80_fire.ogg")
@@ -56,13 +56,13 @@ SWEP.Reverb = {
  
     Sounds = {
         Outside = {
-            Layer = Sound("Atmo_RPG.Outside"),
-            Reflection = Sound("Reflection_Pistol.Outside")
+            Layer = Sound("Atmo_M203.Outside"),
+            Reflection = Sound("")
         }, 
 
         Inside = { 
             Layer = Sound("Atmo_Launcher.Inside"),
-            Reflection = Sound("Reflection_Shotgun.Inside")
+            Reflection = Sound("")
         }
     }
 }
@@ -85,12 +85,12 @@ SWEP.BarrelSmoke = {
 }
 
 SWEP.Cone = {
-    Hip = 0.6, --accuracy while hip
-    Ads = 0.3, --accuracy while aiming
-    Increase = 0.3, --increase cone size by this amount every time we shoot
+    Hip = 0.15, --accuracy while hip
+    Ads = 0.1, --accuracy while aiming
+    Increase = 0.1, --increase cone size by this amount every time we shoot
     AdsMultiplier = 0.15, --multiply the increase value by this amount while aiming
     Max = 1.23, --the cone size will not go beyond this size
-    Decrease = 0.6, -- amount (in seconds) for the cone to completely reset (from max)
+    Decrease = 5.6, -- amount (in seconds) for the cone to completely reset (from max)
     Seed = 54892 --just give this a random number
 }
 
@@ -133,10 +133,14 @@ SWEP.WorldModelOffsets = {
 }
 
 SWEP.ViewModelOffsets = {
+    Sprint = {
+        Angles = Angle(0, 5, 5), 
+        Pos = Vector(-0, -0, -1)
+    }, 
     Aim = {
         Angles = Angle(0, 0, 0), 
-        Pos = Vector(0.15, 0, 0)
-    },  
+        Pos = Vector(-0.026, -8.4, -0.589)
+    }, 
     Idle = {  
         Angles = Angle(0, 0, 0), 
         Pos = Vector(0, 0, 0) 
@@ -157,3 +161,63 @@ SWEP.ViewModelOffsets = {
 }    
    
 SWEP.Shell = "mwb_shelleject_45"
+
+if CLIENT then 
+    function SWEP:DrawCrosshairSticks(x,y) 
+        local aimDelta = 1 - self:GetAimDelta()
+
+        surface.SetAlphaMultiplier(aimDelta)
+    
+        local crosshairAlpha = 200
+    
+        --dot
+        local c = self:GetCone()
+        local m = self.Cone.Max
+        local h = self.Cone.Hip
+        local dotDelta = (c - h) / (m - h) 
+        if (m - h <= 0) then
+            dotDelta = 0
+        end
+    
+        local color = string.ToColor(GetConVar("mgbase_hud_xhaircolor"):GetString())
+        surface.SetDrawColor(color.r, color.g, color.b, 200)
+    
+        if (self:CanDrawCrosshair()) then
+            local cone = self:GetCone() * 100
+            local drawRect = surface.DrawTexturedRectRotated
+            local sizeW = 32
+            local sizeH = 32
+    
+            --left stick
+            draw.RoundedBox( 5, x - cone, y, 2, 7,Color(255,255,255,crosshairAlpha))
+
+            draw.RoundedBox( 20, x - cone - 23, y, 23, 2,Color(255,255,255,crosshairAlpha))
+			
+			draw.RoundedBox( 5, x - cone, y + 20, 2, 7,Color(255,255,255,crosshairAlpha))
+			
+            draw.RoundedBox( 20, x - cone - 17, y + 20, 17, 2,Color(255,255,255,crosshairAlpha))
+			
+			draw.RoundedBox( 5, x - cone, y + 40, 2, 7,Color(255,255,255,crosshairAlpha))
+			
+            draw.RoundedBox( 20, x - cone - 11, y + 40, 11, 2,Color(255,255,255,crosshairAlpha))
+            
+            --left stick
+            draw.RoundedBox( 5, x + cone - 2, y, 2, 7,Color(255,255,255,crosshairAlpha))
+
+            draw.RoundedBox( 20, x + cone, y, 23, 2,Color(255,255,255,crosshairAlpha))
+			
+			draw.RoundedBox( 5, x + cone - 2, y + 20, 2, 7,Color(255,255,255,crosshairAlpha))
+
+            draw.RoundedBox( 20, x + cone, y + 20, 17, 2,Color(255,255,255,crosshairAlpha))
+
+			draw.RoundedBox( 5, x + cone - 2, y + 40, 2, 7,Color(255,255,255,crosshairAlpha))
+			
+            draw.RoundedBox( 20, x + cone, y + 40, 11, 2,Color(255,255,255,crosshairAlpha))
+
+            draw.RoundedBox(20, x-1.5, y-1.5, 3, 3, Color(255,255,255,crosshairAlpha))
+        end
+    
+        surface.SetAlphaMultiplier(1)
+        surface.SetDrawColor(255, 255, 255, 255)
+    end
+end
