@@ -99,7 +99,7 @@ end
 
 local function parentEntity(tr, ent)
 	local arrowHitAng = tr.Normal:Angle()
-	local arrowHitPos = tr.HitPos + arrowHitAng:Forward() * -3 + arrowHitAng:Up() * -1.5
+	local arrowHitPos = tr.HitPos
 	local boneId = tr.Entity:GetHitboxBone(tr.HitBox, 0)
 
 	if (boneId != nil) then
@@ -120,18 +120,12 @@ local function parentEntity(tr, ent)
 end
 
 function ENT:Think()
-	if (!self:GetNailed()) then
-		return
-	end
-
-	if (self.Projectile.PickUp) then
-		local dist = self:GetOwner():NearestPoint(self:GetPos()):DistToSqr(self:GetPos())
-
-		if (dist < 32 * 32) then
-			self:GetOwner():EmitSound("viper/shared/iw8_mp_scavenger_pack_pickup.wav")
-			self:GetOwner():SetAmmo(self:GetOwner():GetAmmoCount("XBowBolt") + 1, "XBowBolt")
-			self:Remove()
-		end
+	if self:GetParent() && self:GetParent():IsNPC() || self:GetParent():IsPlayer() || self:GetParent():IsNextBot() then
+		if self:GetParent():Health() <= 0 || !self:GetOwner():KeyDown(IN_ATTACK) then
+			self:Detonate()
+		end 
+	elseif !self:GetOwner():KeyDown(IN_ATTACK) then
+		self:Detonate()
 	end
 end
  
@@ -187,8 +181,10 @@ function ENT:Impact(tr1, phys, bHull)
 
 			if (tr.Entity:IsPlayer() || tr.Entity:IsNPC() || tr.Entity:IsNextBot() || tr.Entity:IsRagdoll()) then
 				sound.Play("MW19_Crossbow.HitBody", tr.HitPos + tr.HitNormal * 5)
-				self:Remove()
+				parentEntity(tr,self)
 				return
+			else 
+				parentEntity(tr,self)
 			end
 
 			sound.Play("MW19_Crossbow.Hit", tr.HitPos)
@@ -216,7 +212,9 @@ function ENT:Impact(tr1, phys, bHull)
 			})
 		end
 	})
+end
 
+function ENT:Detonate() 
 	local dmg = DamageInfo()
 
 	dmg:SetAttacker(self:GetOwner())

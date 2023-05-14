@@ -21,7 +21,7 @@ end
 
 SWEP.Customization = {
 
-    {"att_perk", "att_vm_pi_decho_soh", "att_perk_fmj", "att_perk_ricochet", "att_perk_fastswap"},
+    {"att_perk", "att_vm_pi_decho_soh", "att_perk_fmj", "att_perk_ricochet", "att_perk_fastswap","att_perk_overclock"},
 	
 	{"att_laser", "attachment_vm_ar_mike4_laser02", "attachment_vm_ar_mike4_laser03"},
 
@@ -34,7 +34,7 @@ SWEP.Customization = {
     "att_vm_4x_west01", "att_vm_4x_west02",
     "att_vm_scope_mike14"},
 	
-	{"att_mike32_he", "att_mike32_thermite", "att_mike32_gas", "att_mike32_emp", "att_mike32_buck"},
+	{"att_mike32_he", "att_mike32_thermite", "att_mike32_gas", "att_mike32_emp", "att_mike32_sticky", "att_mike32_buck"},
 
 }
 
