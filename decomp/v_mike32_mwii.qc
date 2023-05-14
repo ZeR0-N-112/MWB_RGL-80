@@ -572,10 +572,10 @@ $animation "a_walk_corrective_animation" "anims\vm_p32_la_mike32_jog_loop_cor.sm
 $animation "@a_walk_to_sprint_corrective_animation" "anims\vm_p32_la_mike32_jog_to_sprint_cor.smd" {
 }
 
-$animation "a_sprint_idle_corrective_animation" "v_mike4_anims\a_sprint_idle_corrective_animation.smd" {
+$animation "a_sprint_idle_corrective_animation" "anims\vm_p32_la_mike32_sprint_loop_cor.smd" {
 }
 
-$animation "a_sprint_corrective_animation" "anims\vm_p32_la_mike32_jog_loop_cor.smd" {
+$animation "a_sprint_corrective_animation" "anims\vm_p32_la_mike32_sprint_loop_cor.smd" {
 }
 
 $animation "@a_sprint_to_walk_corrective_animation" "anims\vm_p32_la_mike32_jog_to_sprint_cor.smd" {
@@ -584,7 +584,7 @@ $animation "@a_sprint_to_walk_corrective_animation" "anims\vm_p32_la_mike32_jog_
 $animation "a_sprint_offset_idle_corrective_animation" "v_mike4_anims\a_sprint_offset_idle_corrective_animation.smd" {
 }
 
-$animation "a_sprint_offset_corrective_animation" "v_mike4_anims\a_sprint_offset_corrective_animation.smd" {
+$animation "a_sprint_offset_corrective_animation" "anims\vm_p32_la_mike32_jog_to_sprint_cor.smd" {
 }
 
 $animation "a_fidget_corrective_animation" "anims\a_fidget_corn.smd" {
@@ -795,27 +795,27 @@ $animation "sprint_in_to_sub" "v_mike4_anims\sprint_in_to_sub.smd" {
 }
 
 $animation "a_sprint_idle_to_sub" "v_mike4_anims\a_sprint_idle_to_sub.smd" {
-	fps 30
+	fps 20
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 64 64 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 64 64 target 1
 }
 
 $animation "a_sprint_to_sub" "v_mike4_anims\a_sprint_to_sub.smd" {
-	fps 30
+	fps 20
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 64 64 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 64 64 target 1
 }
 
-$animation "a_sprint_idle" "v_mike4_anims\a_sprint_idle.smd" {
-	fps 30
+$animation "a_sprint_idle" "anims\vm_p32_la_mike32_sprint_idle.smd" {
+	fps 20
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "a_sprint_idle_corrective_animation" 0
 }
 
-$animation "a_sprint" "anims\vm_p32_la_mike32_sprint_loop.smd" {
-	fps 22
+$animation "a_sprint" "anims\vm_p32_la_mike32_sprint_loop.003.smd" {
+	fps 20
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "a_sprint_corrective_animation" 0
+	subtract "a_sprint_corrective_animation" 1
 }
 
 $animation "sprint_out_to_sub" "v_mike4_anims\sprint_out_to_sub.smd" {
@@ -831,7 +831,7 @@ $animation "sprint_offset_to_sub" "v_mike4_anims\sprint_offset_to_sub.smd" {
 }
 
 $animation "sprint_idle_to_sub" "v_mike4_anims\sprint_idle_to_sub.smd" {
-	fps 30
+	fps 20
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1
 }
@@ -842,7 +842,7 @@ $animation "a_sprint_offset_idle" "v_mike4_anims\a_sprint_offset_idle.smd" {
 	subtract "a_sprint_offset_idle_corrective_animation" 0
 }
 
-$animation "a_sprint_offset" "v_mike4_anims\a_sprint_offset.smd" {
+$animation "a_sprint_offset" "anims\vm_p32_la_mike32_sprint_offset.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "a_sprint_offset_corrective_animation" 0
@@ -1793,6 +1793,17 @@ $sequence "ads_out" {
 	ikrule "lhand" touch "tag_ik_loc_le" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 10 10 target 1  
 }
 
+$sequence "sprint_loop" {
+	"a_sprint_idle"
+	"a_sprint"
+	blend "sprint_loop" 0 1
+	delta
+	blendwidth 2
+	fadein 0.2
+	fadeout 0.2
+	realtime
+}
+
 $sequence "aim_offset" {
 	"a_aim_idle_to_sub"
 	"a_delta_ads_additive_for_offset"
@@ -1884,17 +1895,6 @@ $sequence "sprint_in" {
 	fps 1.25
 	ikrule "rhand" touch "tag_launcher_offset" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0  
 	ikrule "lhand" touch "tag_ik_loc_le" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1  
-}
-
-$sequence "sprint_loop" {
-	"a_jog_idle"
-	"a_sprint"
-	blend "sprint_loop" 0 1
-	blendwidth 2
-	delta
-	fadein 0.2
-	fadeout 0.2
-    realtime
 }
 
 $sequence "a_sprint_to_walk" {
