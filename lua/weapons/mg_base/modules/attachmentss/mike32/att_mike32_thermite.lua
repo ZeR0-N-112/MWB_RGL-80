@@ -10,6 +10,15 @@ function ATTACHMENT:Stats(weapon)
 	weapon.Firemodes[1].Name = "INCENDIARY"
 
 end
+
+function ATTACHMENT:OverrideWeaponMaterial(path, mat)
+    return path.."thermite/", mat
+end
+
+function ATTACHMENT:OverrideAttachmentsMaterial(path, mat)
+    return path.."thermite/", mat
+end
+
 function ATTACHMENT:PostProcess(weapon)
     BaseClass.PostProcess(self, weapon)
     weapon.Projectile.Class = "sdrk_rgl80_grenade_napalm"
