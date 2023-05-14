@@ -7,7 +7,7 @@ ATTACHMENT.WeaponBodygroups = {
 local BaseClass = GetAttachmentBaseClass(ATTACHMENT.Base)
 function ATTACHMENT:Stats(weapon)
     BaseClass.Stats(self, weapon)
-	weapon.Firemodes[1].Name = "INCENDIARY"
+	weapon.Firemodes[1].Name = "RC STICKY"
 
 end
 

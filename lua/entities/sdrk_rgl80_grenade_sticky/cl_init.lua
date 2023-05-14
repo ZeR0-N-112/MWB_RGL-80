@@ -3,8 +3,8 @@ include("shared.lua")
 ENT.RenderGroup = RENDERGROUP_TRANSLUCENT
 ENT.bTracerOn = false
 
-ENT.OuterFlairColor = Color(248,0,255,255)
-ENT.InnerFlairColor = Color(255,255,255,255)
+ENT.OuterFlairColor = Color(218,12,65,255)
+ENT.InnerFlairColor = Color(255,155,155,255)
 
 ENT.OuterFlairScale = 1
 ENT.InnerFlairScale = 0.3

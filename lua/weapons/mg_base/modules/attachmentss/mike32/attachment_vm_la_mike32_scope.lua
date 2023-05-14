@@ -14,10 +14,10 @@ ATTACHMENT.Optic = {
 }
 ATTACHMENT.Reticle = {
     Material = Material("zeron/reticles/40mmreticle"),
-    Size = 900,
+    Size = 830,
     Color = Color(255, 255, 255, 255),
     Attachment = "reticle",
-	Offset = Vector(-0.18, 0, 0)
+	Offset = Vector(-0.18, -0.2, -0.2)
 }
 local BaseClass = GetAttachmentBaseClass(ATTACHMENT.Base)
 function ATTACHMENT:Stats(weapon)

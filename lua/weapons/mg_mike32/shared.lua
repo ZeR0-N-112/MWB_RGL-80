@@ -141,16 +141,16 @@ SWEP.WorldModelOffsets = {
 
 SWEP.ViewModelOffsets = {
     Sprint = {
-        Angles = Angle(-5, 5, 10), 
-        Pos = Vector(-0, -0, -3)
+        Angles = Angle(0, 5, 5), 
+        Pos = Vector(-0, -0, -1)
     }, 
     Aim = {
         Angles = Angle(0, 0, 0), 
-        Pos = Vector(-1.585, -8.4, -1.0715)
+        Pos = Vector(-0.026, -8.4, -0.589)
     }, 
     Idle = {  
         Angles = Angle(0, 0, 0), 
-        Pos = Vector(-1, 0, -0.5) 
+        Pos = Vector(0, 0, 0) 
     },   
     Inspection = {
         Bone = "tag_pistol_offset",

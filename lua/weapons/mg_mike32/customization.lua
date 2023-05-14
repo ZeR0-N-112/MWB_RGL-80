@@ -21,20 +21,20 @@ end
 
 SWEP.Customization = {
 
-    {"att_perk", "att_vm_pi_decho_soh", "att_perk_fmj", "att_perk_ricochet", "att_perk_fastswap","att_perk_overclock"},
+    {"att_perk", "att_vm_pi_decho_soh", "att_perk_fastswap", "att_perk_overclock"},
 	
 	{"att_laser", "attachment_vm_ar_mike4_laser02", "attachment_vm_ar_mike4_laser03"},
 
     {"attachment_vm_la_mike32_scope", "att_vm_minireddot01_tall", "att_vm_minireddot02_tall", "att_vm_minireddot03_tall",
     "att_vm_holo_west01", "att_vm_holo_west02", "att_vm_holo_east01", "att_vm_reflex_east01",
-    "att_vm_reflex_east02", "att_vm_reflex_west02", "att_vm_reflex_west03",
+    "att_vm_reflex_east02", "att_vm_reflex_west02_tall", "att_vm_reflex_west03",
     "att_vm_thermal_east01", "att_vm_thermal_west01", "att_vm_thermal_east01_hybrid",
     "att_vm_hybrid_west01", "att_vm_reflex_west04", "att_vm_2x_west01",
     "att_vm_hybrid_west03", "att_vm_4x_east01_tall",
     "att_vm_4x_west01", "att_vm_4x_west02",
     "att_vm_scope_mike14"},
 	
-	{"att_mike32_he", "att_mike32_thermite", "att_mike32_gas", "att_mike32_emp", "att_mike32_sticky", "att_mike32_buck"},
+	{"att_mike32_he", "att_mike32_thermite", "att_mike32_gas", "att_mike32_emp", "att_mike32_buck", "att_mike32_sticky"},
 
 }
 
