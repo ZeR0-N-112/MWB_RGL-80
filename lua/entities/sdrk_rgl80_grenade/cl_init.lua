@@ -33,7 +33,6 @@ function ENT:DrawTranslucent(flags)
 			surface.SetDrawColor(self.OuterFlairColor)
 			surface.DrawTexturedRect(-OuterScale/2, -OuterScale/2, OuterScale, OuterScale)
 
-			surface.SetMaterial(flair)
 			surface.SetDrawColor(self.InnerFlairColor)
 			surface.DrawTexturedRect(-InnerScale/2, -InnerScale/2, InnerScale, InnerScale)
         cam.End3D2D()

@@ -37,7 +37,7 @@ local function CanDetonate(ent)
 end
 
 function ENT:PhysicsCollide( data, phys )
-    if data.HitEntity:GetClass() != self:GetClass() && data.HitNormal.z <= -0.6 then
+    if data.HitNormal.z <= -0.6 && CanDetonate(data.HitEntity) then
         local flame = ents.Create("sdrk_napalm_pool")
         flame:SetPos(self:GetPos())
         flame:Spawn()
