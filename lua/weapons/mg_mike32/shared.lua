@@ -85,12 +85,12 @@ SWEP.BarrelSmoke = {
 }
 
 SWEP.Cone = {
-    Hip = 0.6, --accuracy while hip
-    Ads = 0.3, --accuracy while aiming
-    Increase = 0.3, --increase cone size by this amount every time we shoot
+    Hip = 0.15, --accuracy while hip
+    Ads = 0.1, --accuracy while aiming
+    Increase = 0.1, --increase cone size by this amount every time we shoot
     AdsMultiplier = 0.15, --multiply the increase value by this amount while aiming
     Max = 1.23, --the cone size will not go beyond this size
-    Decrease = 0.6, -- amount (in seconds) for the cone to completely reset (from max)
+    Decrease = 5.6, -- amount (in seconds) for the cone to completely reset (from max)
     Seed = 54892 --just give this a random number
 }
 
@@ -157,3 +157,55 @@ SWEP.ViewModelOffsets = {
 }    
    
 SWEP.Shell = "mwb_shelleject_45"
+
+if CLIENT then 
+    function SWEP:DrawCrosshairSticks(x,y) 
+        local aimDelta = 1 - self:GetAimDelta()
+
+        surface.SetAlphaMultiplier(aimDelta)
+    
+        local crosshairAlpha = 200
+    
+        --dot
+        local c = self:GetCone()
+        local m = self.Cone.Max
+        local h = self.Cone.Hip
+        local dotDelta = (c - h) / (m - h) 
+        if (m - h <= 0) then
+            dotDelta = 0
+        end
+    
+        local color = string.ToColor(GetConVar("mgbase_hud_xhaircolor"):GetString())
+        surface.SetDrawColor(color.r, color.g, color.b, 200)
+    
+        if (self:CanDrawCrosshair()) then
+            local cone = self:GetCone() * 100
+            local drawRect = surface.DrawTexturedRectRotated
+            local sizeW = 32
+            local sizeH = 32
+    
+            --left stick
+            draw.RoundedBox( 5, x - cone, y, 3, 60,Color(255,255,255,crosshairAlpha))
+
+            draw.RoundedBox( 20, x - cone - 23, y, 23, 3,Color(255,255,255,crosshairAlpha))
+
+            draw.RoundedBox( 20, x - cone - 17, y + 20, 17, 3,Color(255,255,255,crosshairAlpha))
+
+            draw.RoundedBox( 20, x - cone - 11, y + 40, 11, 3,Color(255,255,255,crosshairAlpha))
+            
+            --left stick
+            draw.RoundedBox( 5, x + cone - 3, y, 3, 60,Color(255,255,255,crosshairAlpha))
+
+            draw.RoundedBox( 20, x + cone, y, 23, 3,Color(255,255,255,crosshairAlpha))
+
+            draw.RoundedBox( 20, x + cone, y + 20, 17, 3,Color(255,255,255,crosshairAlpha))
+
+            draw.RoundedBox( 20, x + cone, y + 40, 11, 3,Color(255,255,255,crosshairAlpha))
+
+            draw.RoundedBox(20, x-3, y-3, 6, 6, Color(255,255,255,crosshairAlpha))
+        end
+    
+        surface.SetAlphaMultiplier(1)
+        surface.SetDrawColor(255, 255, 255, 255)
+    end
+end
