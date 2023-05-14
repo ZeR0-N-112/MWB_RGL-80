@@ -25,7 +25,7 @@ SWEP.Trigger = {
     ReleasedSound = Sound("weap_mike1911_fire_disconnector"),
     Time = 0.05
 }
-SWEP.Slot = 1
+SWEP.Slot = 4
 SWEP.HoldType = "Pistol"
 
 SWEP.Primary.Sound = Sound("mw22/rgl80_fire.ogg")
@@ -133,10 +133,14 @@ SWEP.WorldModelOffsets = {
 }
 
 SWEP.ViewModelOffsets = {
+    Sprint = {
+        Angles = Angle(0, 5, 5), 
+        Pos = Vector(-0, -0, -1)
+    }, 
     Aim = {
         Angles = Angle(0, 0, 0), 
-        Pos = Vector(0.15, 0, 0)
-    },  
+        Pos = Vector(-0.026, -8.4, -0.589)
+    }, 
     Idle = {  
         Angles = Angle(0, 0, 0), 
         Pos = Vector(0, 0, 0) 
