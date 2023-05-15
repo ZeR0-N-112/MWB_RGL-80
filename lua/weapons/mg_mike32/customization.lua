@@ -34,7 +34,7 @@ SWEP.Customization = {
     "att_vm_4x_west01", "att_vm_4x_west02",
     "att_vm_scope_mike14"},
 	
-	{"att_mike32_he", "att_mike32_thermite", "att_mike32_gas", "att_mike32_emp", "att_mike32_buck", "att_mike32_sticky"},
+	{"att_mike32_he", "att_mike32_thermite", "att_mike32_gas", "att_mike32_emp", "att_mike32_buck", "att_mike32_sticky","att_mike32_propel"},
 
 }
 

@@ -14,6 +14,23 @@ PrecacheParticleSystem("AC_muzzle_pistol_smoke_barrel")
 include("animations.lua")
 include("customization.lua")
 
+
+local mgbase = weapons.GetStored("mg_base")
+
+mgbase.StatDefinitions["SWEP.BlastRadius"] = "BlastRadius"
+mgbase.StatDefinitions["SWEP.ImpactBlastRatio"] = "ImpactBlastRatio"
+
+mgbase.StatInfo["BlastRadius"] = {
+    Name = "Blast Radius",
+    ProIfMore = true,
+    ShowPercentage = true
+}
+mgbase.StatInfo["ImpactBlastRatio"] = {
+    Name = "Blast Damage",
+    ProIfMore = true,
+    ShowPercentage = true
+}
+
 if CLIENT then
     killicon.Add( "mg_deagle", "VGUI/entities/mg_deagle", Color(255, 0, 0, 255))
     SWEP.WepSelectIcon = surface.GetTextureID("VGUI/spawnicons/icon_cac_weapon_pi_decho")
