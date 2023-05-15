@@ -221,11 +221,11 @@ function ENT:Impact(tr1, phys, bHull)
 
 	dmg:SetAttacker(self:GetOwner())
 	dmg:SetInflictor(self)
-	dmg:SetDamage(self.Weapon.Bullet.Damage[1] * 4)
+	dmg:SetDamage(self.Weapon.Bullet.Damage[1] * self.Weapon.ImpactBlastRatio)
 	dmg:SetDamageType(DMG_BLAST + DMG_AIRBOAT)
 	dmg:SetReportedPosition(self:GetPos())
 
-	util.BlastDamageInfo(dmg, self:GetPos(), 128)
+	util.BlastDamageInfo(dmg, self:GetPos(), self.Weapon.BlastRadius)
 	util.ScreenShake(self:GetPos(), 3500, 1111, 1, 124 * 4)
 	self:Remove()
 end

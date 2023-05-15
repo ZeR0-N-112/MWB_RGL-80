@@ -47,9 +47,12 @@ SWEP.CanDisableAimReload = true
 SWEP.Projectile = {
     Class = "sdrk_rgl80_grenade", --bullet entity class
     Speed = 2800, --2800
-    Gravity = 1.05, --1.05
-    Penetrate = true
+    Gravity = 0.7, --1.05
+    Penetrate = false
 }
+
+SWEP.BlastRadius = 128
+SWEP.ImpactBlastRatio = 2
 
 SWEP.ParticleEffects = {
     ["MuzzleFlash"] = "AC_muzzle_pistol_suppressed",
@@ -92,12 +95,12 @@ SWEP.BarrelSmoke = {
 }
 
 SWEP.Cone = {
-    Hip = 0.15, --accuracy while hip
+    Hip = 0.1, --accuracy while hip
     Ads = 0.1, --accuracy while aiming
-    Increase = 0.1, --increase cone size by this amount every time we shoot
+    Increase = 0.05, --increase cone size by this amount every time we shoot
     AdsMultiplier = 0.15, --multiply the increase value by this amount while aiming
     Max = 1.23, --the cone size will not go beyond this size
-    Decrease = 5.6, -- amount (in seconds) for the cone to completely reset (from max)
+    Decrease = 0.5, -- amount (in seconds) for the cone to completely reset (from max)
     Seed = 54892 --just give this a random number
 }
 
