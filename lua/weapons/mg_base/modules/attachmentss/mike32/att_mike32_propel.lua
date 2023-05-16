@@ -1,6 +1,6 @@
 ATTACHMENT.Base = "att_ammo"
 ATTACHMENT.Name = "40mm High Propellant"
-ATTACHMENT.Icon = Material("viper/mw/attachments/icons/grips/icon_attachment_bipod_grip.vmt")
+ATTACHMENT.Icon = Material("zeron/icons/40mmicon.vmt")
 ATTACHMENT.WeaponBodygroups = {
     ["ammotype"] = 1
 }
@@ -14,9 +14,9 @@ function ATTACHMENT:Stats(weapon)
 end
 
 function ATTACHMENT:OverrideWeaponMaterial(path, mat)
-    return path.."thermite/", mat
+    return path.."hp/", mat
 end
 
 function ATTACHMENT:OverrideAttachmentsMaterial(path, mat)
-    return path.."thermite/", mat
+    return path.."hp/", mat
 end

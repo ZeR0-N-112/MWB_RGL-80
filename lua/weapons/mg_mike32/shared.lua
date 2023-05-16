@@ -112,12 +112,12 @@ SWEP.BarrelSmoke = {
 }
 
 SWEP.Cone = {
-    Hip = 0.1, --accuracy while hip
+    Hip = 0.12, --accuracy while hip
     Ads = 0.1, --accuracy while aiming
-    Increase = 0.05, --increase cone size by this amount every time we shoot
+    Increase = 0.2, --increase cone size by this amount every time we shoot
     AdsMultiplier = 0.15, --multiply the increase value by this amount while aiming
     Max = 1.23, --the cone size will not go beyond this size
-    Decrease = 0.5, -- amount (in seconds) for the cone to completely reset (from max)
+    Decrease = 0.2, -- amount (in seconds) for the cone to completely reset (from max)
     Seed = 54892 --just give this a random number
 }
 

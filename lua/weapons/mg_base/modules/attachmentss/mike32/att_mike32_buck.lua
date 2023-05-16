@@ -1,6 +1,6 @@
 ATTACHMENT.Base = "att_ammo"
 ATTACHMENT.Name = "40mm M576 Buckshot"
-ATTACHMENT.Icon = Material("viper/mw/attachments/icons/grips/icon_attachment_bipod_grip.vmt")
+ATTACHMENT.Icon = Material("zeron/icons/40mmicon.vmt")
 ATTACHMENT.Bodygroups = {
     ["ammotype"] = 1
 }

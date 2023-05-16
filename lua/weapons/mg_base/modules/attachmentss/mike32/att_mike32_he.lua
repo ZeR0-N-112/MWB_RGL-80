@@ -1,6 +1,6 @@
 ATTACHMENT.Base = "att_ammo"
 ATTACHMENT.Name = "HE"
-ATTACHMENT.Icon = Material("viper/mw/attachments/icons/grips/icon_attachment_bipod_grip.vmt")
+ATTACHMENT.Icon = Material("zeron/icons/40mmicon.vmt")
 
 local BaseClass = GetAttachmentBaseClass(ATTACHMENT.Base)
 function ATTACHMENT:Stats(weapon)
