@@ -69,7 +69,7 @@ SWEP.Projectile = {
 }
 
 SWEP.BlastRadius = 128
-SWEP.ImpactBlastRatio = 2
+SWEP.ImpactBlastRatio = 3
 
 SWEP.ParticleEffects = {
     ["MuzzleFlash"] = "AC_muzzle_pistol_suppressed",
