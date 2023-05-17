@@ -5,8 +5,8 @@ AddCSLuaFile()
 sound.Add({
     name =           "weap_mike32_fire",
     channel =        CHAN_WEAPON,
-    level = 90	,
-    volume =         7,
+    level = 90,
+    volume = 1,
     pitch = {100,100},
     sound = {"mw22/weap_mike32_fire_plr_01.wav",
 	         "mw22/weap_mike32_fire_plr_02.wav",
@@ -33,7 +33,7 @@ sound.Add({
 sound.Add({
     name =            "weap_mike203_fire_plr_atmos_out",
     channel =        CHAN_ATMO,
- 	volume =      1,
+ 	volume =      0.5,
     sound = {"mw22/weap_mike203_fire_plr_atmos_01.wav",
 	         "mw22/weap_mike203_fire_plr_atmos_02.wav",
 			 "mw22/weap_mike203_fire_plr_atmos_03.wav",
@@ -43,7 +43,7 @@ sound.Add({
 sound.Add({
     name =            "weap_mike203_fire_plr_atmos_in",
     channel =        CHAN_ATMO,
- 	volume =      1,
+ 	volume =      0.5,
     sound = {"mw22/weap_mike203_fire_plr_atmos_int1_01.wav",
 	         "mw22/weap_mike203_fire_plr_atmos_int1_02.wav",
 			 "mw22/weap_mike203_fire_plr_atmos_int1_03.wav",
@@ -194,7 +194,7 @@ sound.Add({
 	name = "p32_la_mike32_reload_magout",
 	channel = CHAN_WPNFOLEY + 8,
 	
-	volume = 1,
+	volume = 0.6,
 	pitch = {100,100},
 	sound = {
 		"mw22/p32_la_mike32_reload_magout.wav",
@@ -204,7 +204,7 @@ sound.Add({
 	name = "p32_la_mike32_reload_magin",
 	channel = CHAN_WPNFOLEY + 5,
 	
-	volume = 1,
+	volume = 0.6,
 	pitch = {100,100},
 	sound = {
 		"mw22/p32_la_mike32_reload_magin.wav",
@@ -215,7 +215,7 @@ sound.Add({
 	name = "p32_la_mike32_reload_grab",
 	channel = CHAN_WPNFOLEY + 6,
 	
-	volume = 1,
+	volume = 0.5,
 	pitch = {100,100},
 	sound = {
 		"mw22/p32_la_mike32_reload_grab.wav",
@@ -226,7 +226,7 @@ sound.Add({
 	name = "p32_la_mike32_reload_grab2",
 	channel = CHAN_WPNFOLEY + 7,
 	
-	volume = 1,
+	volume = 0.5,
 	pitch = {100,100},
 	sound = {
 		"mw22/p32_la_mike32_reload_grab2.wav",
@@ -234,9 +234,9 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_fast_raise",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 8,
 	
-	volume = 1,
+	volume = 0.3,
 	pitch = {100,100},
 	sound = {
 		"mw22/p32_la_mike32_reload_fast_raise.wav",
@@ -246,7 +246,7 @@ sound.Add({
 	name = "p32_la_mike32_reload_fast_magout",
 	channel = CHAN_WPNFOLEY + 7,
 	
-	volume = 1,
+	volume = 0.6,
 	pitch = {100,100},
 	sound = {
 		"mw22/p32_la_mike32_reload_fast_magout.wav",
@@ -254,7 +254,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_fast_magin",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 6,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -264,9 +264,9 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_fast_end",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 5,
 	
-	volume = 1,
+	volume = 0.5,
 	pitch = {100,100},
 	sound = {
 		"mw22/p32_la_mike32_reload_fast_end.wav",
@@ -274,9 +274,9 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_fast_breechopen",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 4,
 	
-	volume = 1,
+	volume = 0.6,
 	pitch = {100,100},
 	sound = {
 		"mw22/p32_la_mike32_reload_fast_breechopen.wav",
@@ -284,9 +284,9 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_fast_breechclose",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 3,
 	
-	volume = 1,
+	volume = 0.6,
 	pitch = {100,100},
 	sound = {
 		"mw22/p32_la_mike32_reload_fast_breechclose.wav",
@@ -294,7 +294,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_end",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 8,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -306,7 +306,7 @@ sound.Add({
 	name = "p32_la_mike32_reload_breechopen",
 	channel = CHAN_WPNFOLEY + 7,
 	
-	volume = 1,
+	volume = 0.6,
 	pitch = {100,100},
 	sound = {
 		"mw22/p32_la_mike32_reload_breechopen.wav",
@@ -314,9 +314,9 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_breechclose",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 6,
 	
-	volume = 1,
+	volume = 0.5,
 	pitch = {100,100},
 	sound = {
 		"mw22/p32_la_mike32_reload_breechclose.wav",
@@ -324,9 +324,9 @@ sound.Add({
 })
 sound.Add({
 	name = "wfoly_plr_la_mike32_reload_close_01",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 5,
 	
-	volume = 1,
+	volume = 0.6,
 	pitch = {100,100},
 	sound = {
 		"mw22/wfoly_plr_la_mike32_reload_close_01.wav",
