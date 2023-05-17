@@ -67,7 +67,7 @@ sound.Add({
 })
 sound.Add({
 	name = "weap_la_mike32_ads_up",
-	channel = CHAN_WPNFOLEY + 4,
+	channel = CHAN_WPNFOLEY + 1,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -78,7 +78,7 @@ sound.Add({
 -- Sound: 68
 sound.Add({
 	name = "weap_la_mike32_ads_down",
-	channel = CHAN_WPNFOLEY + 5,
+	channel = CHAN_WPNFOLEY + 2,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -89,7 +89,7 @@ sound.Add({
 -- Sound: 69
 sound.Add({
 	name = "p32_la_mike32_inspect_raise",
-	channel = CHAN_WPNFOLEY + 5,
+	channel = CHAN_WPNFOLEY + 3,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -100,7 +100,7 @@ sound.Add({
 -- Sound: 70
 sound.Add({
 	name = "p32_la_mike32_inspect_rattle",
-	channel = CHAN_WPNFOLEY + 6,
+	channel = CHAN_WPNFOLEY + 4,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -111,7 +111,7 @@ sound.Add({
 -- Sound: 71
 sound.Add({
 	name = "p32_la_mike32_inspect_breechopen",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 5,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -122,7 +122,7 @@ sound.Add({
 -- Sound: 72
 sound.Add({
 	name = "p32_la_mike32_inspect_breechclose",
-	channel = CHAN_WPNFOLEY + 8,
+	channel = CHAN_WPNFOLEY + 6,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -132,7 +132,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_inspect_end",
-	channel = CHAN_WPNFOLEY + 8,
+	channel = CHAN_WPNFOLEY + 7,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -152,7 +152,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_raise_rattle",
-	channel = CHAN_WPNFOLEY + 8,
+	channel = CHAN_WPNFOLEY + 9,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -162,7 +162,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_raise_quick_rattle",
-	channel = CHAN_WPNFOLEY + 8,
+	channel = CHAN_WPNFOLEY + 10,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -172,7 +172,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_rattle",
-	channel = CHAN_WPNFOLEY + 8,
+	channel = CHAN_WPNFOLEY + 1,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -182,7 +182,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_raise",
-	channel = CHAN_WPNFOLEY + 8,
+	channel = CHAN_WPNFOLEY + 2,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -192,7 +192,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_magout",
-	channel = CHAN_WPNFOLEY + 8,
+	channel = CHAN_WPNFOLEY + 3,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -202,7 +202,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_magin",
-	channel = CHAN_WPNFOLEY + 5,
+	channel = CHAN_WPNFOLEY + 4,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -213,7 +213,7 @@ sound.Add({
 -- Sound: 70
 sound.Add({
 	name = "p32_la_mike32_reload_grab",
-	channel = CHAN_WPNFOLEY + 6,
+	channel = CHAN_WPNFOLEY + 5,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -224,7 +224,7 @@ sound.Add({
 -- Sound: 71
 sound.Add({
 	name = "p32_la_mike32_reload_grab2",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 6,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -244,7 +244,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_fast_magout",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 1,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -254,7 +254,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_fast_magin",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 2,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -264,7 +264,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_fast_end",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 3,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -274,7 +274,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_fast_breechopen",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 4,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -284,7 +284,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_fast_breechclose",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 5,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -294,7 +294,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_end",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 6,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -314,7 +314,7 @@ sound.Add({
 })
 sound.Add({
 	name = "p32_la_mike32_reload_breechclose",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 8,
 	
 	volume = 1,
 	pitch = {100,100},
@@ -324,7 +324,7 @@ sound.Add({
 })
 sound.Add({
 	name = "wfoly_plr_la_mike32_reload_close_01",
-	channel = CHAN_WPNFOLEY + 7,
+	channel = CHAN_WPNFOLEY + 9,
 	
 	volume = 1,
 	pitch = {100,100},

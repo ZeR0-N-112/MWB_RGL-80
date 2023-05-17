@@ -1234,7 +1234,7 @@ $sequence "draw_first" {
 	{ event 5004 27 "Viewmodel.Large" }
 	{ event 5004 8 "p32_la_mike32_reload_fast_breechclose" }
 	{ event 9021 34 "1" }
-	{ event 5004 17 "p32_la_mike32_reload_fast_end" }
+	{ event 5004 7 "p32_la_mike32_reload_fast_end" }
 	{ event 9011 39 "1" }
 	{ event 5004 40 "Viewmodel.Small" }
 	fadein 0.2
@@ -1282,9 +1282,9 @@ $sequence "reload_empty" {
 	{ event 5004 84 "p32_la_mike32_reload_magin" }
 	{ event 5004 54 "Viewmodel.Large" }
 	{ event 5004 138 "p32_la_mike32_reload_grab" }
-	{ event 5004 145 "p32_la_mike32_reload_breechclose" }
+	{ event 5004 142 "p32_la_mike32_reload_breechclose" }
 	{ event 5004 69 "Viewmodel.Small" }
-	{ event 5004 150 "p32_la_mike32_reload_end" }
+	{ event 5004 141 "p32_la_mike32_reload_end" }
 	fadein 0.2
 	fadeout 0.2
 	addlayer "jog_loop"
@@ -1327,7 +1327,7 @@ $sequence "reload_empty_fast" {
 	{ event 5004 104 "p32_la_mike32_reload_fast_breechclose" }
 	{ event 5004 36 "Viewmodel.Small" }
 	{ event 9011 42 "1" }
-	{ event 5004 114 "p32_la_mike32_reload_fast_end" }
+	{ event 5004 67 "p32_la_mike32_reload_fast_end" }
 	{ event 5004 48 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1372,9 +1372,9 @@ $sequence "reload" {
 	{ event 5004 84 "p32_la_mike32_reload_magin" }
 	{ event 5004 54 "Viewmodel.Large" }
 	{ event 5004 138 "p32_la_mike32_reload_grab" }
-	{ event 5004 145 "p32_la_mike32_reload_breechclose" }
+	{ event 5004 142 "p32_la_mike32_reload_breechclose" }
 	{ event 5004 69 "Viewmodel.Small" }
-	{ event 5004 150 "p32_la_mike32_reload_end" }
+	{ event 5004 141 "p32_la_mike32_reload_end" }
 	fadein 0.2
 	fadeout 0.2
 	addlayer "jog_loop"
@@ -1417,7 +1417,7 @@ $sequence "reload_fast" {
 	{ event 5004 104 "p32_la_mike32_reload_fast_breechclose" }
 	{ event 5004 36 "Viewmodel.Small" }
 	{ event 9011 42 "1" }
-	{ event 5004 114 "p32_la_mike32_reload_fast_end" }
+	{ event 5004 67"p32_la_mike32_reload_fast_end" }
 	{ event 5004 48 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1486,10 +1486,10 @@ $sequence "inspect" {
 	{ event 9011 4 "0" }
 	{ event 5004 14 "Viewmodel.Small" }
 	{ event 5004 92 "p32_la_mike32_inspect_rattle" }
-	{ event 5004 105 "p32_la_mike32_inspect_breechopen" }
+	{ event 5004 106 "p32_la_mike32_inspect_breechopen" }
 	{ event 5004 78 "Viewmodel.Small" }
 	{ event 5004 152 "p32_la_mike32_inspect_breechclose" }
-	{ event 5004 164 "p32_la_mike32_inspect_end" }
+	{ event 5004 124 "p32_la_mike32_inspect_end" }
 	{ event 9011 129 "1" }
 	{ event 5004 138 "Viewmodel.Small" }
 	fadein 0.2
@@ -1736,7 +1736,7 @@ $sequence "melee_hit_03" {
 
 $sequence "ads_in" {
 	"mw2mglanims\vm_p32_la_mike32_idle.smd"
-	{ event 5004 1 "weap_ar_mike4_ads_up" }
+	{ event 5004 1 "weap_la_mike32_ads_up" }
 	{ event 9011 0 "1" }
 	{ event 9011 0 "1" }
 	fadein 0.2
@@ -1766,7 +1766,7 @@ $sequence "ads_in" {
 
 $sequence "ads_out" {
 	"anims\vm_p32_la_mike32_ads_down.smd"
-	{ event 5004 1 "weap_ar_mike4_ads_down" }
+	{ event 5004 3 "weap_la_mike32_ads_down" }
 	{ event 9011 0 "1" }
 	{ event 9011 0 "1" }
 	fadein 0.2
