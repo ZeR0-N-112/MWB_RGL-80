@@ -161,6 +161,16 @@ sound.Add({
 		}
 })
 sound.Add({
+	name = "p32_la_mike32_raise_quick_rattle",
+	channel = CHAN_WPNFOLEY + 8,
+	
+	volume = 1,
+	pitch = {100,100},
+	sound = {
+		"mw22/p32_la_mike32_raise_quick_rattle.wav",
+		}
+})
+sound.Add({
 	name = "p32_la_mike32_reload_rattle",
 	channel = CHAN_WPNFOLEY + 8,
 	
