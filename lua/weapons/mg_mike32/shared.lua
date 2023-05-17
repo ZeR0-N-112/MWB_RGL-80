@@ -45,14 +45,14 @@ SWEP.Spawnable = true
 SWEP.VModel = Model("models/zeron/mgl/vm_la_mike32.mdl")
 SWEP.WorldModel = Model("models/viper/mw/weapons/w_deagle.mdl")
 SWEP.Trigger = {
-    PressedSound = Sound("weap_decho_fire_first"),
-    ReleasedSound = Sound("weap_mike1911_fire_disconnector"),
+    PressedSound = Sound("weap_mike32_fire_plr_mech"),
+    ReleasedSound = Sound("weap_mike203_trig"),
     Time = 0.05
 }
 SWEP.Slot = 4
 SWEP.HoldType = "Pistol"
 
-SWEP.Primary.Sound = Sound("mw22/rgl80_fire.ogg")
+SWEP.Primary.Sound = Sound("weap_mike32_fire")
 SWEP.Primary.Ammo = "357"
 SWEP.Primary.ClipSize = 6 
 SWEP.Primary.Automatic = false
@@ -83,12 +83,12 @@ SWEP.Reverb = {
  
     Sounds = {
         Outside = {
-            Layer = Sound("Atmo_M203.Outside"),
+            Layer = Sound("weap_mike203_fire_plr_atmos_out"),
             Reflection = Sound("")
         }, 
 
         Inside = { 
-            Layer = Sound("Atmo_Launcher.Inside"),
+            Layer = Sound("weap_mike203_fire_plr_atmos_in"),
             Reflection = Sound("")
         }
     }

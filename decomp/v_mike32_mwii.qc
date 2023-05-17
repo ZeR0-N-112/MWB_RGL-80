@@ -812,7 +812,7 @@ $animation "a_sprint_idle" "anims\vm_p32_la_mike32_sprint_idle.smd" {
 	subtract "a_sprint_idle_corrective_animation" 0
 }
 
-$animation "a_sprint" "anims\vm_p32_la_mike32_sprint_loop.003.smd" {
+$animation "a_sprint" "anims\vm_p32_la_mike32_sprint_loop.smd" {
 	fps 20
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "a_sprint_corrective_animation" 1
