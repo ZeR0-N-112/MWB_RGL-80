@@ -18,9 +18,9 @@ sound.Add({
 })
 sound.Add({
     name =           "weap_mike32_fire_plr_mech",
-    channel =        CHAN_WEAPON,
+    channel =        CHAN_TRIGGER + 1,
     level = 90,
-    volume =         10,
+    volume =         0.4,
     pitch = {-2,2},
     sound = {"mw22/weap_mike32_fire_plr_mech_01.wav",
 	         "mw22/weap_mike32_fire_plr_mech_01.wav",
@@ -33,7 +33,7 @@ sound.Add({
 sound.Add({
     name =            "weap_mike203_fire_plr_atmos_out",
     channel =        CHAN_ATMO,
- volume =      1.2,
+ 	volume =      1,
     sound = {"mw22/weap_mike203_fire_plr_atmos_01.wav",
 	         "mw22/weap_mike203_fire_plr_atmos_02.wav",
 			 "mw22/weap_mike203_fire_plr_atmos_03.wav",
@@ -43,7 +43,7 @@ sound.Add({
 sound.Add({
     name =            "weap_mike203_fire_plr_atmos_in",
     channel =        CHAN_ATMO,
- volume =      1.2,
+ 	volume =      1,
     sound = {"mw22/weap_mike203_fire_plr_atmos_int1_01.wav",
 	         "mw22/weap_mike203_fire_plr_atmos_int1_02.wav",
 			 "mw22/weap_mike203_fire_plr_atmos_int1_03.wav",
@@ -52,7 +52,7 @@ sound.Add({
 })
 sound.Add({
 	name = "weap_mike203_trig",
-	channel = CHAN_WPNFOLEY + 1,
+	channel = CHAN_TRIGGER,
 	
 	volume = 1,
 	pitch = {100,100},
