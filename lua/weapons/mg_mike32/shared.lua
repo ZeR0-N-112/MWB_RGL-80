@@ -50,10 +50,10 @@ SWEP.Trigger = {
     Time = 0.05
 }
 SWEP.Slot = 4
-SWEP.HoldType = "Pistol"
+SWEP.HoldType = "Shotgun"
 
 SWEP.Primary.Sound = Sound("weap_mike32_fire")
-SWEP.Primary.Ammo = "357"
+SWEP.Primary.Ammo = "SMG1_Grenade"
 SWEP.Primary.ClipSize = 6 
 SWEP.Primary.Automatic = false
 SWEP.Primary.BurstRounds = 1
@@ -248,3 +248,26 @@ if CLIENT then
         surface.SetDrawColor(255, 255, 255, 255)
     end
 end
+
+               
+--                    ***HOLY SECTION***
+--                    PRAYING NOT TO BUG
+--                            _
+--                         _ooOoo_
+--                        o8888888o
+--                        88" . "88
+--                        (| -_- |)
+--                        O\  =  /O
+--                     ____/`---'\____
+--                   .'  \\|     |//  `.
+--                  /  \\|||  :  |||//  \
+--                 /  _||||| -:- |||||_  \
+--                 |   | \\\  -  /'| |   |
+--                 | \_|  `\`---'//  |_/ |
+--                 \  .-\__ `-. -'__/-.  /
+--               ___`. .'  /--.--\  `. .'___
+--            ."" '<  `.___\_<|>_/___.' _> \"".
+--           | | :  `- \`. ;`. _/; .'/ /  .' ; |
+--           \  \ `-.   \_\_`. _.'_/_/  -' _.' /
+-- ===========`-.`___`-.__\ \___  /__.-'_.'_.-'================
+ 
