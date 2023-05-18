@@ -222,7 +222,7 @@ function ENT:Detonate()
 
 	dmg:SetAttacker(self:GetOwner())
 	dmg:SetInflictor(self)
-	dmg:SetDamage(self.BlastDamage)
+	dmg:SetDamage(self.Bullet.Damage[1] * self.BlastDamage)
 	dmg:SetDamageType(DMG_BLAST + DMG_AIRBOAT)
 	dmg:SetReportedPosition(self:GetPos())
 
