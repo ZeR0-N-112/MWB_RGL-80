@@ -21,7 +21,7 @@ end
 
 SWEP.Customization = {
 
-    {"att_perk", "att_vm_pi_decho_soh", "att_perk_fastswap", "att_perk_overclock"},
+    {"att_perk", "att_mike32_soh", "att_perk_fastswap", "att_perk_overclock"},
 	
 	{"attachment_vm_la_mike32_scope", "att_vm_minireddot01_tall", "att_vm_minireddot02_tall", "att_vm_minireddot03_tall",
     "att_vm_holo_west01", "att_vm_holo_west02", "att_vm_holo_east01", "att_vm_reflex_east01",

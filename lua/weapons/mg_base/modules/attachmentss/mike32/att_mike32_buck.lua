@@ -13,7 +13,7 @@ function ATTACHMENT:Stats(weapon)
 	weapon.Firemodes[1].Name = "BUCKSHOT"
 	weapon.Cone.Hip = 0.5
 	weapon.Cone.Ads = 0.3
-	weapon.Primary.Sound = Sound("mw19.scharlie.Fire")
+	weapon.Primary.Sound = Sound("weap_mike32_buck_fire")
 	weapon.ParticleEffects.MuzzleFlash = "AC_muzzle_Shotgun"
 end
 function ATTACHMENT:PostProcess(weapon)

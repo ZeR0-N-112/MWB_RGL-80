@@ -32,8 +32,11 @@ mgbase.StatInfo["ImpactBlastRatio"] = {
 }
 
 if CLIENT then
-    killicon.Add( "mg_deagle", "VGUI/entities/mg_deagle", Color(255, 0, 0, 255))
-    SWEP.WepSelectIcon = surface.GetTextureID("VGUI/spawnicons/icon_cac_weapon_pi_decho")
+    killicon.Add( "mg_mike32", "zeron/icons/mike32icon2x1", Color(255, 0, 0, 255))
+	killicon.Add( "sdrk_rgl80_grenade", "zeron/icons/mike32icon2x1", Color(255, 0, 0, 255))
+	killicon.Add( "sdrk_napalm_pool", "zeron/icons/mike32icon2x1", Color(255, 0, 0, 255))
+	killicon.Add( "sdrk_rgl80_grenade_sticky", "zeron/icons/mike32icon2x1", Color(255, 0, 0, 255))
+    SWEP.WepSelectIcon = surface.GetTextureID("zeron/icons/mike32icon2x1")
 end
 
 SWEP.Base = "mg_base"

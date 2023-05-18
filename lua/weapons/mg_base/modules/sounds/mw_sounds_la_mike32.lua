@@ -15,7 +15,25 @@ sound.Add({
 			 "mw22/weap_mike32_fire_plr_05.wav",
 			 "mw22/weap_mike32_fire_plr_06.wav",
             }              
+})--weap_slima_fire_plr_shot_01
+
+sound.Add({
+    name =           "weap_mike32_buck_fire",
+    channel =        CHAN_WEAPON,
+    level = 90,
+    volume = 1,
+    pitch = {100,100},
+    sound = {"mw22/weap_mike14_fire_plr_01.ogg",
+	         "mw22/weap_mike14_fire_plr_01.ogg",
+			 "mw22/weap_mike14_fire_plr_01.ogg",
+			 "mw22/weap_mike14_fire_plr_01.ogg",
+			 "mw22/weap_mike14_fire_plr_01.ogg",
+			 "mw22/weap_mike14_fire_plr_01.ogg",
+			 "mw22/weap_mike14_fire_plr_01.ogg",
+			 "mw22/weap_mike14_fire_plr_01.ogg",
+            }              
 })
+
 sound.Add({
     name =           "weap_mike32_fire_plr_mech",
     channel =        CHAN_TRIGGER + 1,
