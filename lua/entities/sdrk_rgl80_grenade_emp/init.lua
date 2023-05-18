@@ -35,6 +35,7 @@ function ENT:Initialize()
 	self.Projectile = table.Copy(self.Weapon.Projectile)
 	self:GetPhysicsObject():SetVelocityInstantaneous(self:GetAngles():Forward() * self.Projectile.Speed)
 	self.LastPos = self:GetOwner():EyePos()
+	self.Bullet = self.Weapon.Bullet
 end
 
 function ENT:Think()

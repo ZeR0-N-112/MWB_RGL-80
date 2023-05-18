@@ -35,6 +35,9 @@ function ENT:Initialize()
 	self.Projectile = table.Copy(self.Weapon.Projectile)
 	self:GetPhysicsObject():SetVelocityInstantaneous(self:GetAngles():Forward() * self.Projectile.Speed)
 	self.LastPos = self:GetOwner():EyePos()
+	self.Bullet = self.Weapon.Bullet
+	self.BlastDamage = self.Weapon.ImpactBlastRatio
+	self.BlastRadius = self.Weapon.BlastRadius
 end
 
 function ENT:Think()
@@ -219,7 +222,7 @@ function ENT:Detonate()
 
 	dmg:SetAttacker(self:GetOwner())
 	dmg:SetInflictor(self)
-	dmg:SetDamage(self.Weapon.Bullet.Damage[1] * 4)
+	dmg:SetDamage(self.BlastDamage)
 	dmg:SetDamageType(DMG_BLAST + DMG_AIRBOAT)
 	dmg:SetReportedPosition(self:GetPos())
 
