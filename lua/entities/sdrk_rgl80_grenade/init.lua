@@ -80,7 +80,6 @@ function ENT:PhysicsUpdate(phys)
 	local tr = util.TraceHull(trData)
 
 	if (tr.Hit && (tr.Entity:IsPlayer() || tr.Entity:IsNPC())) then
-		self:SetPos(tr.HitPos)
 		self:Impact(tr, phys, true)
 		return
 	end
@@ -151,6 +150,8 @@ function ENT:Impact(tr1, phys, bHull)
 	self:SetNailed(true)
 
 	self:StopParticles()
+
+	self:SetPos(tr1.HitPos)
 	
 	self:FireBullets({
 		Attacker = self:GetOwner(),
