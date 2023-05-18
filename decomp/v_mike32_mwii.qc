@@ -1164,7 +1164,7 @@ $sequence "idle" {
 $sequence "holster" {
 	"mw2mglanims\vm_p32_la_mike32_drop.smd"
 	{ event 9011 0 "0" }
-	{ event 5004 0 "p32_la_mike32_drop_rattle" }
+	{ event 5004 0 "weap_mike4_drop_plr" }
 	fadein 0.2
 	fadeout 0.2
 	addlayer "jog_loop"
@@ -1195,7 +1195,7 @@ $sequence "holster" {
 
 $sequence "draw" {
 	"mw2mglanims\vm_p32_la_mike32_raise.smd"
-	{ event 5004 0 "p32_la_mike32_raise_rattle" }
+	{ event 5004 0 "weap_mike4_raise_plr" }
 	{ event 9011 8 "1" }
 	{ event 5004 16 "Viewmodel.Small" }
 	fadein 0.2
@@ -1228,13 +1228,13 @@ $sequence "draw" {
 
 $sequence "draw_first" {
 	"mw2mglanims\vm_p32_la_mike32_raise_first.smd"
-	{ event 5004 1 "p32_la_mike32_raise_quick_rattle" }
+	{ event 5004 1 "weap_mike4_raise_first_01" }
 	{ event 5004 12 "Viewmodel.Small" }
 	{ event 5004 21 "Viewmodel.Small" }
 	{ event 5004 27 "Viewmodel.Large" }
-	{ event 5004 8 "p32_la_mike32_reload_fast_breechclose" }
+	{ event 5004 27 "weap_mike4_raise_first_02" }
 	{ event 9021 34 "1" }
-	{ event 5004 7 "p32_la_mike32_reload_fast_end" }
+	{ event 5004 39 "weap_mike4_raise_first_03" }
 	{ event 9011 39 "1" }
 	{ event 5004 40 "Viewmodel.Small" }
 	fadein 0.2
@@ -1271,20 +1271,20 @@ $sequence "reload_empty" {
 	blend "aim_offset" 0 1
 	blendwidth 2
 	{ event 9011 0 "0" }
-	{ event 5004 0 "p32_la_mike32_reload_raise" }
+	{ event 5004 0 "weap_mike4_reload_empty_lift_plr" }
+	{ event 5004 7 "MW_MagazineDrop.AR.Poly -10,10,40" }
 	{ event 5004 8 "Viewmodel.Medium" }
-	{ event 5004 4 "p32_la_mike32_reload_breechopen" }
+	{ event 5004 8 "weap_mike4_reload_empty_magout_plr" }
 	{ event 9031 24 "ResetBullets" }
-	{ event 5004 13 "p32_la_mike32_reload_grab2" }
+	{ event 5004 31 "weap_mike4_reload_empty_magin_plr" }
 	{ event 5004 35 "Viewmodel.Small" }
-	{ event 5004 27 "p32_la_mike32_reload_magout" }
+	{ event 5004 40 "weap_mike4_reload_empty_magin_plr_02" }
 	{ event 5004 40 "Viewmodel.Medium" }
-	{ event 5004 84 "p32_la_mike32_reload_magin" }
+	{ event 5004 53 "weap_mike4_reload_empty_chamber_plr" }
 	{ event 5004 54 "Viewmodel.Large" }
-	{ event 5004 138 "p32_la_mike32_reload_grab" }
-	{ event 5004 142 "p32_la_mike32_reload_breechclose" }
+	{ event 9011 61 "1" }
+	{ event 5004 64 "weap_mike4_reload_empty_end_plr" }
 	{ event 5004 69 "Viewmodel.Small" }
-	{ event 5004 141 "p32_la_mike32_reload_end" }
 	fadein 0.2
 	fadeout 0.2
 	addlayer "jog_loop"
@@ -1317,17 +1317,18 @@ $sequence "reload_empty_fast" {
 	blend "aim_offset" 0 1
 	blendwidth 2
 	{ event 9011 0 "0" }
-	{ event 5004 0 "p32_la_mike32_reload_fast_raise" }
+	{ event 5004 0 "weap_mike4_reload_empty_fast_lift_plr" }
 	{ event 5004 7 "Viewmodel.Small" }
-	{ event 5004 1 "p32_la_mike32_reload_fast_breechopen" }
-	{ event 5004 19 "p32_la_mike32_reload_fast_magout" }
+	{ event 5004 7 "MW_MagazineDrop.AR.Poly -10,10,40" }
+	{ event 5004 7 "weap_mike4_reload_empty_fast_magout_plr" }
+	{ event 9031 19 "ResetBullets" }
 	{ event 5004 24 "Viewmodel.Small" }
-	{ event 5004 67 "p32_la_mike32_reload_fast_magin" }
+	{ event 5004 25 "weap_mike4_reload_empty_fast_magin_plr" }
 	{ event 5004 27 "Viewmodel.Medium" }
-	{ event 5004 104 "p32_la_mike32_reload_fast_breechclose" }
+	{ event 5004 33 "weap_mike4_reload_empty_fast_chamber_plr" }
 	{ event 5004 36 "Viewmodel.Small" }
 	{ event 9011 42 "1" }
-	{ event 5004 67 "p32_la_mike32_reload_fast_end" }
+	{ event 5004 47 "weap_mike4_reload_empty_fast_end_plr" }
 	{ event 5004 48 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1360,21 +1361,18 @@ $sequence "reload" {
 	"mw2mglanims\vm_p32_la_mike32_reload.smd"
 	blend "aim_offset" 0 1
 	blendwidth 2
-	{ event 9011 0 "0" }
-	{ event 5004 0 "p32_la_mike32_reload_raise" }
-	{ event 5004 8 "Viewmodel.Medium" }
-	{ event 5004 4 "p32_la_mike32_reload_breechopen" }
-	{ event 9031 24 "ResetBullets" }
-	{ event 5004 13 "p32_la_mike32_reload_grab2" }
-	{ event 5004 35 "Viewmodel.Small" }
-	{ event 5004 27 "p32_la_mike32_reload_magout" }
-	{ event 5004 40 "Viewmodel.Medium" }
-	{ event 5004 84 "p32_la_mike32_reload_magin" }
-	{ event 5004 54 "Viewmodel.Large" }
-	{ event 5004 138 "p32_la_mike32_reload_grab" }
-	{ event 5004 142 "p32_la_mike32_reload_breechclose" }
-	{ event 5004 69 "Viewmodel.Small" }
-	{ event 5004 141 "p32_la_mike32_reload_end" }
+	{ event 5004 0 "weap_mike4_reload_lift_plr" }
+	{ event 9011 2 "0" }
+	{ event 5004 21 "weap_mike4_reload_magout_plr" }
+	{ event 5004 21 "Viewmodel.Small" }
+	{ event 5004 26 "Viewmodel.Small" }
+	{ event 5004 34 "Viewmodel.Small" }
+	{ event 5004 34 "weap_mike4_reload_magin_plr" }
+	{ event 5004 39 "Viewmodel.Medium" }
+	{ event 5004 40 "weap_mike4_reload_magin_plr_02" }
+	{ event 5004 53 "weap_mike4_reload_end_plr" }
+	{ event 9031 56 "ResetBullets" }
+	{ event 9011 59 "1" }
 	fadein 0.2
 	fadeout 0.2
 	addlayer "jog_loop"
@@ -1407,18 +1405,16 @@ $sequence "reload_fast" {
 	blend "aim_offset" 0 1
 	blendwidth 2
 	{ event 9011 0 "0" }
-	{ event 5004 0 "p32_la_mike32_reload_fast_raise" }
-	{ event 5004 7 "Viewmodel.Small" }
-	{ event 5004 1 "p32_la_mike32_reload_fast_breechopen" }
-	{ event 5004 19 "p32_la_mike32_reload_fast_magout" }
-	{ event 5004 24 "Viewmodel.Small" }
-	{ event 5004 67 "p32_la_mike32_reload_fast_magin" }
-	{ event 5004 27 "Viewmodel.Medium" }
-	{ event 5004 104 "p32_la_mike32_reload_fast_breechclose" }
-	{ event 5004 36 "Viewmodel.Small" }
-	{ event 9011 42 "1" }
-	{ event 5004 67"p32_la_mike32_reload_fast_end" }
-	{ event 5004 48 "Viewmodel.Small" }
+	{ event 5004 0 "weap_mike4_reload_fast_lift_plr" }
+	{ event 5004 10 "Viewmodel.Small" }
+	{ event 5004 11 "weap_mike4_reload_fast_magout_plr" }
+	{ event 5004 11 "MW_MagazineDrop.AR.Poly -10,10,40" }
+	{ event 5004 22 "weap_mike4_reload_fast_magin_plr" }
+	{ event 5004 28 "weap_mike4_reload_fast_magin_plr_02" }
+	{ event 5004 28 "Viewmodel.Medium" }
+	{ event 9011 35 "1" }
+	{ event 5004 36 "weap_mike4_reload_fast_end_plr" }
+	{ event 5004 39 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
 	addlayer "jog_loop"
@@ -1451,6 +1447,7 @@ $sequence "fire" {
 	blend "aim_offset" 0 1
 	blendwidth 2
 	{ event 9001 1 "MuzzleFlash muzzle" }
+	{ event 6001 1 "shell_eject" }
 	{ event 9011 0 "1" }
 	{ event 9011 0 "1" }
 	fadein 0.2
@@ -1463,6 +1460,7 @@ $sequence "fire" {
 	addlayer "freefall_loop"
 	addlayer "aim_offset"
 	addlayer "firemode_offset"
+	
 	addlayer "grip_barshort_gripang_offset"
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
@@ -1482,14 +1480,14 @@ $sequence "fire" {
 
 $sequence "inspect" {
 	"mw2mglanims\vm_p32_la_mike32_inspect.smd"
-	{ event 5004 1 "p32_la_mike32_inspect_raise" }
+	{ event 5004 1 "wfoly_ar_mike4_inspect_01" }
 	{ event 9011 4 "0" }
 	{ event 5004 14 "Viewmodel.Small" }
-	{ event 5004 92 "p32_la_mike32_inspect_rattle" }
-	{ event 5004 106 "p32_la_mike32_inspect_breechopen" }
+	{ event 5004 39 "wfoly_ar_mike4_inspect_02" }
+	{ event 5004 72 "wfoly_ar_mike4_inspect_03" }
 	{ event 5004 78 "Viewmodel.Small" }
-	{ event 5004 152 "p32_la_mike32_inspect_breechclose" }
-	{ event 5004 124 "p32_la_mike32_inspect_end" }
+	{ event 5004 102 "wfoly_ar_mike4_inspect_04" }
+	{ event 5004 126 "wfoly_ar_mike4_inspect_05" }
 	{ event 9011 129 "1" }
 	{ event 5004 138 "Viewmodel.Small" }
 	fadein 0.2
@@ -1736,7 +1734,7 @@ $sequence "melee_hit_03" {
 
 $sequence "ads_in" {
 	"mw2mglanims\vm_p32_la_mike32_idle.smd"
-	{ event 5004 1 "weap_la_mike32_ads_up" }
+	{ event 5004 1 "weap_ar_mike4_ads_up" }
 	{ event 9011 0 "1" }
 	{ event 9011 0 "1" }
 	fadein 0.2
@@ -1766,7 +1764,7 @@ $sequence "ads_in" {
 
 $sequence "ads_out" {
 	"anims\vm_p32_la_mike32_ads_down.smd"
-	{ event 5004 3 "weap_la_mike32_ads_down" }
+	{ event 5004 1 "weap_ar_mike4_ads_down" }
 	{ event 9011 0 "1" }
 	{ event 9011 0 "1" }
 	fadein 0.2

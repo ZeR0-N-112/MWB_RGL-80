@@ -46,7 +46,7 @@ SWEP.Category = "Modern Warfare"
 SWEP.SubCategory = "Launchers"
 SWEP.Spawnable = true
 SWEP.VModel = Model("models/zeron/mgl/vm_la_mike32.mdl")
-SWEP.WorldModel = Model("models/viper/mw/weapons/w_deagle.mdl")
+SWEP.WorldModel = Model("models/zeron/mgl/w_mike32.mdl")
 SWEP.Trigger = {
     PressedSound = Sound("weap_mike32_fire_plr_mech"),
     ReleasedSound = Sound("weap_mike203_trig"),
@@ -157,9 +157,9 @@ SWEP.Zoom = {
 }
 
 SWEP.WorldModelOffsets = {
-    Bone = "tag_pistol_offset",
+    Bone = "tag_sling",
     Angles = Angle(0, 90, -90),
-    Pos = Vector(3, -3, -1.75)
+    Pos = Vector(9, -2, -6)
 }
 
 SWEP.ViewModelOffsets = {
